@@ -1,0 +1,1964 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>국립중앙박물관</title>
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <!-- AOS css-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/T-index.css" media="screen and (max-width: 768px)" />
+  <link rel="stylesheet" href="css/m-index.css" media="screen and (max-width: 430px)" />
+  <!-- jquery -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <div class="header-top">
+        <div class="inner">
+          <img src="img/imgi_1_ico_flag.svg" alt="" />
+          <p>이 누리집은 대한민국 공식 전자정부 누리집입니다.</p>
+        </div>
+      </div>
+      <div class="inner">
+        <div class="header-link">
+          <ul>
+            <li><a href="#">어린이박물관</a></li>
+            <li><a href="#">학예사자격증</a></li>
+            <li><a href="#">박물관신문</a></li>
+            <li><a href="#">온라인 뮤지엄숍</a></li>
+            <li class="d-link">
+              <a href="#">소속박물관 바로가기
+                <span><i class="fa-solid fa-angle-down"></i></span></a>
+              <ul class="link-list">
+                <li><a href="#">국립경주박물관</a></li>
+                <li><a href="#">국립광주박물관</a></li>
+                <li><a href="#">국립전주박물관</a></li>
+                <li><a href="#">국립대구박물관</a></li>
+                <li><a href="#">국립부여박물관</a></li>
+                <li><a href="#">국립공주박물관</a></li>
+                <li><a href="#">국립진주박물관</a></li>
+                <li><a href="#">국립청주박물관</a></li>
+                <li><a href="#">국립김해박물관</a></li>
+                <li><a href="#">국립제주박물관</a></li>
+                <li><a href="#">국립춘천박물관</a></li>
+                <li><a href="#">국립나주박물관</a></li>
+                <li><a href="#">국립익산박물관</a></li>
+              </ul>
+            </li>
+            <li class="lang">
+              <a href="#">Language <span><i class="fa-solid fa-angle-down"></i></span></a>
+              <ul class="lang-list">
+                <li><a href="#">English</a></li>
+                <li><a href="#">日本語</a></li>
+                <li><a href="#">中文</a></li>
+              </ul>
+            </li>
+            <li><a href="#">누리집 소통망(SNS)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="gnb-area">
+        <div class="inner">
+          <h1 class="logo">
+            <a href="#"><img src="img/header_logo.png" alt="국립중앙박물관" /></a>
+          </h1>
+          <ul class="gnb">
+            <li class="depth1">
+              <a href="exh_index.html">관람 정보</a>
+              <ul class="depth2">
+                <li><a href="exh_index.html">관람 안내</a></li>
+                <li>
+                  <a href="#">전시해설</a>
+                  <ul class="depth3">
+                    <li><a href="#">전시 해설 안내</a></li>
+                    <li><a href="#">전시 해설 예약</a></li>
+                    <li><a href="#">큐레이터와의 대화</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">예약하기</a>
+                  <ul class="depth3">
+                    <li><a href="#">어린이박물관 관람 예약</a></li>
+                    <li>
+                      <a href="#">VR체험 예약 (디지털 실감 영상관 2)</a>
+                    </li>
+                    <li><a href="#">교육 프로그램 예약</a></li>
+                    <li><a href="#">학생 단체 관람 예약</a></li>
+                    <li><a href="#">전시 해설 예약</a></li>
+                    <li><a href="#">외부해설 예약</a></li>
+                    <li><a href="#">시설 대관 예약</a></li>
+                    <li><a href="#">야간개장 셔틀버스 예약</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">관람&middot;편의시설</a>
+                  <ul class="depth3">
+                    <li><a href="#">박물관 전체 안내</a></li>
+                    <li><a href="#">전시 공간</a></li>
+                    <li><a href="#">주요 시설</a></li>
+                    <li><a href="#">야외 시설</a></li>
+                    <li><a href="#">식당, 편의시설</a></li>
+                    <li><a href="#">편의시설 연락처</a></li>
+                    <li><a href="#">층별 안내</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">접근성 안내</a></li>
+                <li>
+                  <a href="#">오시는 길</a>
+                  <ul class="depth3">
+                    <li><a href="#">지하철</a></li>
+                    <li><a href="#">버스</a></li>
+                    <li><a href="#">자기차량</a></li>
+                    <li><a href="#">주차 안내</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="depth1">
+              <a href="#">전시</a>
+              <ul class="depth2">
+                <li>
+                  <a href="#">상설 전시</a>
+                  <ul class="depth3">
+                    <li><a href="#">상설전시실 층별 안내</a></li>
+                    <li><a href="#">추천 동선</a></li>
+                    <li><a href="#">선사&middot;고대관</a></li>
+                    <li><a href="#">중&middot;근세관</a></li>
+                    <li><a href="#">서화관</a></li>
+                    <li><a href="#">기증관</a></li>
+                    <li><a href="#">사유의 방</a></li>
+                    <li><a href="#">조각&middot;공예관</a></li>
+                    <li><a href="#">세계문화관</a></li>
+                    <li><a href="#">역사의 길</a></li>
+                    <li><a href="#">야외 전시</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">특별 전시</a>
+                  <ul class="depth3">
+                    <li><a href="#">현재 전시</a></li>
+                    <li><a href="#">예정 전시</a></li>
+                    <li><a href="#">지난 전시</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">디지털 실감 영상관</a>
+                  <ul class="depth3">
+                    <li><a href="#">디지털 실감 영상관 안내</a></li>
+                    <li><a href="#">실감1관</a></li>
+                    <li><a href="#">실감2관</a></li>
+                    <li><a href="#">실감3관</a></li>
+                    <li><a href="#">디지털 광개토대왕릉비</a></li>
+                    <li><a href="#">경천사 십층석탑</a></li>
+                    <li><a href="#">명품 실감</a></li>
+                    <li><a href="#">열린마당 실감 전광판</a></li>
+                    <li><a href="#">온라인 실감콘텐츠</a></li>
+                    <li><a href="#">메타버스 박물관 '힐링 동산'</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">공간 오감</a></li>
+                <li>
+                  <a href="#">온라인 전시관</a>
+                  <ul class="depth3">
+                    <li><a href="#">중앙박물관</a></li>
+                    <li><a href="#">소속박물관</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">우리문화유산 국외 전시</a></li>
+                <li><a href="#">소속 국립박물관 전시</a></li>
+                <li><a href="#">전시도록</a></li>
+                <li>
+                  <a href="#">외국박물관 소장 한국문화유산</a>
+                  <ul class="depth3">
+                    <li><a href="#">미주</a></li>
+                    <li><a href="#">유럽</a></li>
+                    <li><a href="#">아시아</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="depth1">
+              <a href="#">교육</a>
+              <ul class="depth2">
+                <li><a href="#">일반교육(MODU)</a></li>
+                <li><a href="#">전문교육(뮤지엄 아카데미)</a></li>
+              </ul>
+            </li>
+            <li class="depth1">
+              <a href="#">문화행사</a>
+              <ul class="depth2">
+                <li><a href="#">행사</a></li>
+                <li><a href="#">공연</a></li>
+              </ul>
+            </li>
+            <li class="depth1">
+              <a href="#">소장품</a>
+              <ul class="depth2">
+                <li><a href="#">큐레이터 추천 소장품</a></li>
+                <li><a href="#">소장품 검색</a></li>
+                <li><a href="#">국보&middot;보물 검색</a></li>
+                <li><a href="#">3D 데이터 검색</a></li>
+                <li><a href="#">수어 동영상</a></li>
+                <li><a href="#">음성 안내</a></li>
+                <li><a href="#">소장품 열람·복제</a></li>
+                <li><a href="#">소장품 대여 안내</a></li>
+                <li>
+                  <a href="#">문화유산 기증 안내</a>
+                  <ul class="depth3">
+                    <li><a href="#">기증안내</a></li>
+                    <li><a href="#">기증내역/사례</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="depth1">
+              <a href="#">학술행사&middot;출판</a>
+              <ul class="depth2">
+                <li><a href="#">학술행사</a></li>
+                <li>
+                  <a href="#">정기간행물</a>
+                  <ul class="depth3">
+                    <li><a href="#">간행물 검색</a></li>
+                    <li><a href="#">기획특별전 전시보고서</a></li>
+                    <li><a href="#">논문투고</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">고고학</a>
+                  <ul class="depth3">
+                    <li><a href="#">조사 연구 현황</a></li>
+                    <li><a href="#">발굴 보고서</a></li>
+                    <li><a href="#">연구 보고서</a></li>
+                    <li><a href="#">학술 토론회 자료</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">역사학</a>
+                  <ul class="depth3">
+                    <li><a href="#">조사 연구 현황</a></li>
+                    <li><a href="#">외규장각 의궤 총서</a></li>
+                    <li><a href="#">연구 보고서</a></li>
+                    <li><a href="#">학술 토론회 자료</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">미술사학</a>
+                  <ul class="depth3">
+                    <li><a href="#">조사 연구 현황</a></li>
+                    <li><a href="#">한국서화도록</a></li>
+                    <li><a href="#">한국도자도록</a></li>
+                    <li><a href="#">불교미술연구 조사보고</a></li>
+                    <li><a href="#">연구 보고서</a></li>
+                    <li><a href="#">학술 토론회 자료</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">아시아학</a>
+                  <ul class="depth3">
+                    <li><a href="#">조사 연구 현황</a></li>
+                    <li><a href="#">연구 보고서</a></li>
+                    <li><a href="#">학술 토론회 자료</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">보존과학</a>
+                  <ul class="depth3">
+                    <li><a href="#">역할</a></li>
+                    <li><a href="#">분야</a></li>
+                    <li><a href="#">발간물</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">박물관 교육</a>
+                  <ul class="depth3">
+                    <li><a href="#">어린이 전시</a></li>
+                    <li><a href="#">교육 연구</a></li>
+                    <li><a href="#">교육 아카이브</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">일제 강점기 조사 자료</a>
+                  <ul class="depth3">
+                    <li><a href="#">조사 연구 현황</a></li>
+                    <li><a href="#">일제 강점기 자료 원문</a></li>
+                    <li><a href="#">조사 보고서</a></li>
+                    <li><a href="#">문서 자료집</a></li>
+                    <li><a href="#">유리건판 자료집</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">이건희 기증품</a></li>
+                <li>
+                  <a href="#">도서관</a>
+                  <ul class="depth3">
+                    <li><a href="#">도서관 소개</a></li>
+                    <li><a href="#">소장도서 검색</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">기타</a></li>
+              </ul>
+            </li>
+            <li class="depth1">
+              <a href="#">소식&middot;참여</a>
+              <ul class="depth2">
+                <li>
+                  <a href="#">소식</a>
+                  <ul class="depth3">
+                    <li><a href="#">알림</a></li>
+                    <li><a href="#">고시/공고</a></li>
+                    <li><a href="#">채용 안내</a></li>
+                    <li><a href="#">보도 자료</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">영상</a>
+                  <ul class="depth3">
+                    <li><a href="#">영상 소식</a></li>
+                    <li><a href="#">박물관의 특별한 초대</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">자원봉사 안내</a>
+                  <ul class="depth3">
+                    <li><a href="#">성인 자원봉사 활동안내</a></li>
+                    <li><a href="#">청소년 자원봉사 활동안내</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">청년멘토</a></li>
+                <li>
+                  <a href="#">학예사 자격증 안내</a>
+                  <ul class="depth3">
+                    <li><a href="#">학예사 자격증 제도 안내</a></li>
+                    <li><a href="#">경력인정 대상기관 안내</a></li>
+                    <li><a href="#">관계 법령 안내</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">전자 민원</a></li>
+                <li>
+                  <a href="#">정보공개</a>
+                  <ul class="depth3">
+                    <li><a href="#">정보공개 제도 안내</a></li>
+                    <li><a href="#">비공개 세부기준</a></li>
+                    <li><a href="#">정보공개 관련법 및 규정</a></li>
+                    <li><a href="#">관련 서식</a></li>
+                    <li><a href="#">정보공개 수수료</a></li>
+                    <li><a href="#">사전정보공표</a></li>
+                    <li><a href="#">정보공개 자료</a></li>
+                    <li><a href="#">정보공개 청구신청</a></li>
+                    <li><a href="#">공공데이터 개방</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">소식지 시설</a>
+                  <ul class="depth3">
+                    <li><a href="#">박물관신문</a></li>
+                    <li><a href="#">큐레이터가 보내는 엽서</a></li>
+                    <li><a href="#">NMK Magazine</a></li>
+                    <li><a href="#">아침 행복이 똑똑</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">안전 제안 창구</a></li>
+              </ul>
+            </li>
+            <li class="depth1">
+              <a href="#">박물관 소개</a>
+              <ul class="depth2">
+                <li><a href="#">인사말</a></li>
+                <li><a href="#">비전과 전략</a></li>
+                <li>
+                  <a href="#">발자취</a>
+                  <ul class="depth3">
+                    <li><a href="#">1945~</a></li>
+                    <li><a href="#">1955~</a></li>
+                    <li><a href="#">1972~</a></li>
+                    <li><a href="#">1986~</a></li>
+                    <li><a href="#">1996~</a></li>
+                    <li><a href="#">2005~</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">조직 및 업무</a></li>
+                <li>
+                  <a href="#">시설 소개</a>
+                  <ul class="depth3">
+                    <li><a href="#">건축 개요</a></li>
+                    <li><a href="#">배치 현황</a></li>
+                    <li><a href="#">층별 상세</a></li>
+                    <li><a href="#">시설 개요</a></li>
+                    <li><a href="#">주요 특징</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">수장고</a>
+                  <ul class="depth3">
+                    <li><a href="#">수장고 소개</a></li>
+                    <li><a href="#">수장고 현황</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">박물관 관련 자료</a>
+                  <ul class="depth3">
+                    <li><a href="#">연보</a></li>
+                    <li><a href="#">규정 등</a></li>
+                    <li><a href="#">법령자료실</a></li>
+                    <li><a href="#">박물관 기념사업</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">문화유산 표준관리시스템</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="util">
+            <ul>
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">회원가입</a></li>
+              <li>
+                <div class="search-area">
+                  <button class="search">
+                    <img src="img/imgi_50_btn_search_open.png" alt="" />
+                  </button>
+                  <span><img src="img/ico_menu_open.png" alt="" /></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 서치화면 -->
+          <div class="search-layer" id="searchLayer">
+            <div class="search-top">
+              <h1 class="search-logo">
+                <img src="img/search_logo.png" alt="국립중앙박물관" />
+              </h1>
+              <button class="close-btn">
+                <img src="img/ico_white_close.png" alt="" />
+              </button>
+            </div>
+
+            <div class="search-box">
+              <form action="#" class="search-form">
+                <input type="text" placeholder="검색어를 입력하세요." class="search-input" />
+                <button type="submit" class="search-submit">검색</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- m-gnb -->
+      <div class="m-gnb">
+        <div class="inner">
+          <ul class="m-gnb-top">
+            <li class="lang">
+              <a href="#">Language <span><i class="fa-solid fa-angle-down"></i></span></a>
+              <ul class="lang-list">
+                <li><a href="#">English</a></li>
+                <li><a href="#">日本語</a></li>
+                <li><a href="#">中文</a></li>
+              </ul>
+            </li>
+            <button class="m-close-btn">
+              <img src="img/ico_black_close.png" alt="" />
+            </button>
+          </ul>
+          <div class="m-util">
+            <h2>로그인</h2>
+            <div class="util-2">
+              <p>회원가입</p>
+              <p>예약하기</p>
+            </div>
+          </div>
+          <ul class="m-icon">
+            <li>
+              <a href="#"><img src="img/ico_reser.png" alt="" /><span>예약현황</span></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/ico_map.png" alt="" /><span>오시는길</span></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/ico_facil.png" alt="" /><span>편의시설</span></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/ico_facil.png" alt="" /><span>안내도(PDF) 내려받기</span></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/ico_child.png" alt="" /><span>어린이박물관</span></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/ico_online.png" alt="" /><span>온라인뮤지업숍</span></a>
+            </li>
+          </ul>
+          <ul class="m-list">
+            <li>
+              <div class="m-list-open">
+                <span>관람 정보</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <ul class="m-depth1">
+                <li><a href="exh_index.html">관람 안내</a></li>
+                <li><a href="#">전시해설</a></li>
+                <li><a href="#">예약하기</a></li>
+                <li><a href="#">관람&middot;편의시설</a></li>
+                <li><a href="#">접근성 안내</a></li>
+                <li><a href="#">오시는 길</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="m-list-open">
+                <span>전시</span> <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <ul class="m-depth1">
+                <li><a href="#">상설 전시</a></li>
+                <li><a href="#">특별 전시</a></li>
+                <li><a href="#">디지털 실감 영상관</a></li>
+                <li><a href="#">공간 오감</a></li>
+                <li><a href="#">온라인 전시관</a></li>
+                <li><a href="#">우리문화유산 국외 전시</a></li>
+                <li><a href="#">소속 국립박물관 전시</a></li>
+                <li><a href="#">전시도록</a></li>
+                <li><a href="#">외국박물관 소장 한국문화유산</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="m-list-open">
+                <span>교육</span> <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <ul class="m-depth1">
+                <li><a href="#">일반교육(MODU)</a></li>
+                <li><a href="#">전문교육(뮤지엄 아카데미)</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="m-list-open">
+                <span>문화행사</span> <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <ul class="m-depth1">
+                <li><a href="#">행사</a></li>
+                <li><a href="#">공연</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="m-list-open">
+                <span>소장품</span> <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <ul class="m-depth1">
+                <li><a href="#">큐레이터 추천 소장품</a></li>
+                <li><a href="#">소장품 검색</a></li>
+                <li><a href="#">국보&middot;보물 검색</a></li>
+                <li><a href="#">3D 데이터 검색</a></li>
+                <li><a href="#">수어 동영상</a></li>
+                <li><a href="#">음성 안내</a></li>
+                <li><a href="#">소장품 열람&middot;복제</a></li>
+                <li><a href="#">소장품 대여 안내</a></li>
+                <li><a href="#">문화유산 기증 안내</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="m-list-open">
+                <span>학술행사&middot;출판</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <ul class="m-depth1">
+                <li><a href="#">학술행사</a></li>
+                <li><a href="#">정기간행물</a></li>
+                <li><a href="#">고고학</a></li>
+                <li><a href="#">역사학</a></li>
+                <li><a href="#">미술사학</a></li>
+                <li><a href="#">아시아학</a></li>
+                <li><a href="#">보존과학</a></li>
+                <li><a href="#">박물관 교육</a></li>
+                <li><a href="#">일제 강점기 조사 자료</a></li>
+                <li><a href="#">이건희 기증품</a></li>
+                <li><a href="#">도서관</a></li>
+                <li><a href="#">기타</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="m-list-open">
+                <span>소식&middot;참여</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <ul class="m-depth1">
+                <li><a href="#">소식</a></li>
+                <li><a href="#">영상</a></li>
+                <li><a href="#">자원봉사 안내</a></li>
+                <li><a href="#">청년멘토</a></li>
+                <li><a href="#">학예사 자격증 안내</a></li>
+                <li><a href="#">전자 민원</a></li>
+                <li><a href="#">정보공개</a></li>
+                <li><a href="#">소식지</a></li>
+                <li><a href="#">시설 안전 제안 창구</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="m-list-open">
+                <span>박물관소개</span>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <ul class="m-depth1">
+                <li><a href="#">인사말</a></li>
+                <li><a href="#">비전과 전략</a></li>
+                <li><a href="#">발자취</a></li>
+                <li><a href="#">조직 및 업무</a></li>
+                <li><a href="#">시설 소개</a></li>
+                <li><a href="#">수장고</a></li>
+                <li><a href="#">박물관 관련 자료</a></li>
+                <li><a href="#">문화유산 표준관리시스템</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+  </header>
+  <!-- //헤더 -->
+
+  <main>
+    <section id="sec-visual">
+      <div class="inner">
+        <!-- 메인비주얼 영역 -->
+        <div class="swiper mainvisual">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide1"></div>
+            <div class="swiper-slide slide2"></div>
+            <div class="swiper-slide slide3"></div>
+            <div class="swiper-slide slide4"></div>
+            <div class="swiper-slide slide5"></div>
+          </div>
+          <!-- 네비게이션 버튼 -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <!-- 페이지네이션 -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="main-bot">
+          <div class="text-area">
+            <p>
+              <strong class="info"><i class="fa-regular fa-clock"></i>관람시간</strong><strong>월/화/목/금/일</strong>
+              <span>10:00 ~ 18:00</span>
+              <strong>수/토</strong><span>10:00 ~ 21:00 </span>
+              <span class="sp">* 입장 마감은 폐관30분 전까지</span>
+            </p>
+            <p>
+              <strong class="info"><img src="img//imgi_59_ico_main_cont_img_2.png"
+                  alt="" />관람료</strong><strong>무료</strong><span>특별전시는 유료</span>
+            </p>
+          </div>
+          <div class="btn-area">
+            <button class="btn">오시는길</button>
+          </div>
+          <div class="btn-area">
+            <button class="btn">예약하기</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //메인비주얼 -->
+
+    <section id="sec-exh">
+      <div class="inner">
+        <div class="exh-top">
+          <h2><a href="#">전시</a></h2>
+          <div class="swiper-nav">
+            <button class="my-prev">
+              <img src="img/btn_swiper_prev.png" alt="" />
+            </button>
+            <button class="swiper-toggle">
+              <img src="img/stop.png" alt="" />
+            </button>
+            <button class="my-next">
+              <img src="img/btn_swiper_next.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <!-- 전시 슬라이드 영역 -->
+        <div class="swiper exh">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide01.jpg" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립중앙박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">특별전</span>
+              <p><a href="#">광복 80주년 기념 특별전 우리의 이순신</a></p>
+              <p class="date">2025-11-28~2026-03-03</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide02.jpg" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립중앙박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">특별전</span>
+              <p>
+                <a href="#">인상주의에서 초기 모더니즘까지, 빛을 수집한 사람들 -
+                  메트로폴리탄박물관 소장 로버트 리먼 컬렉션</a>
+              </p>
+              <p class="date">2025-11-14~2026-03-15</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide03.png" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립중앙박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">테마전</span>
+              <p><a href="#">보존과학, 새로운 시작 함께하는 미래</a></p>
+              <p class="date">2025-10-28~2026-06-30</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide04.jpg" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립중앙박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">테마전</span>
+              <p><a href="#">각角진 백자 이야기</a></p>
+              <p class="date">2025-08-26~2026-06-21</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide05.jpg" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립부여박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">부여</span>
+              <p><a href="#">산화코발트, 기증품에 스며든 푸른빛</a></p>
+              <p class="date">2025-04-08~2026-06-28</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide06.png" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립공주박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">공주</span>
+              <p><a href="#">한성 475, 두 왕의 승부수</a></p>
+              <p class="date">2025-09-16~2026-02-22</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide07.jpg" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립김해박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">김해</span>
+              <p><a href="#">시간의 공존 김해 대성동 고분군</a></p>
+              <p class="date">2025-09-23~2026-02-22</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide08.jpg" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립익산박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">익산</span>
+              <p><a href="#">탑이 품은 칼, 미륵사에 깃든 바람</a></p>
+              <p class="date">2025-09-24~2026-02-01</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide09.jpg" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립부여박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">부여</span>
+              <p><a href="#">80년, 함께 걸어온 기억의 순간</a></p>
+              <p class="date">2025-09-30~2026-06-28</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide10.jpg" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립대구박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">대구</span>
+              <p><a href="#">알록달록 동자상</a></p>
+              <p class="date">2025-09-30~2026-10-05</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide11.jpg" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립진주박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">진주</span>
+              <p><a href="#">암행어사, 백성의 곁에 서다</a></p>
+              <p class="date">2025-10-01~2026-02-22</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide012.jpg" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립나주박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">나주</span>
+              <p><a href="#">특별전 흙으로 만든 널, 고요한 위엄</a></p>
+              <p class="date">2025-10-01~2026-03-15</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide13.png" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립경주박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">경주</span>
+              <p><a href="#">신라 금관, 권력과 위신</a></p>
+              <p class="date">2025-11-02~2026-02-22</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide14.jpg" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립춘천박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">춘천</span>
+              <p><a href="#">강원의 삶과 이상향</a></p>
+              <p class="date">2025-11-11~2028-12-31</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide15.jpg" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립대구박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">대구</span>
+              <p><a href="#">사람과 땅, 지리지에 담다</a></p>
+              <p class="date">2025-11-25~2026-02-22</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide16.jpg" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립춘천박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">춘천</span>
+              <p><a href="#">강원의 불교미술, 깨달음을 찾는 길</a></p>
+              <p class="date">2025-11-25~2028-12-31</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide17.jpg" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립전주박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">전주</span>
+              <p><a href="#">대한국인 안중근 쓰다</a></p>
+              <p class="date">2025-12-02~2026-03-08</p>
+            </div>
+            <div class="swiper-slide slide">
+              <figure>
+                <a href="#">
+                  <img src="img/exhslide18.jpg" alt="" />
+                  <div class="overlay">
+                    <p class="overlay-text">국립광주박물관</p>
+                  </div>
+                </a>
+              </figure>
+              <span class="black">현재전시</span>
+              <span class="white">광주</span>
+              <p><a href="#">푸른 세상을 빚다, 고려 상형청자</a></p>
+              <p class="date">2025-12-18~2026-03-15</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //전시 끝 -->
+
+    <section id="sec-notice">
+      <div class="inner">
+        <h2>
+          <img src="img/ico_main_notice.png" alt="" />
+          알립니다
+        </h2>
+        <div class="notice-menu">
+          <div class="notice-con">
+            <div class="notice-tab">
+              <div class="notice-button">
+                <button class="notice-btn">알림</button>
+                <button class="notice-btn">고시/공고</button>
+                <button class="notice-btn">채용 안내</button>
+                <button class="notice-btn">보도자료</button>
+              </div>
+              <a href="#"><img src="img/ico.plus.png" alt="" /></a>
+            </div>
+            <div class="notice-list">
+              <ul>
+                <li>
+                  <a href="#">상설전시관 2층 서화관 휴실 연장 알림(~'26.2.25.) </a><span class="date">2025.11.21</span>
+                </li>
+                <li>
+                  <a href="#">국립중앙박물관 특별전 연계 강연&middot;토론회 '인간
+                    이순신을 말하다' 개최 </a><span class="date">2026.01.07</span>
+                </li>
+                <li>
+                  <a href="#">2026년 상반기 국립중앙박물관 청년멘토 모집
+                  </a>
+                  <span class="date">2026.01.05</span>
+                </li>
+                <li>
+                  <a href="#">2026년 1월 도서관 휴관 안내</a>
+                  <span class="date"> 2025.12.26</span>
+                </li>
+                <li>
+                  <a href="#">박물관 휴관 안내 (2026.1.1.)</a><span class="date"> 2025.12.24</span>
+                </li>
+                <li>
+                  <a href="#">2025년 12월 도서관 휴관 안내</a><span class="date"> 2025.12.22</span>
+                </li>
+              </ul>
+              <ul class="blind">
+                <li>
+                  <a href="#">2026년 국립중앙박물관 디자인 전문경력관 나군
+                    <span class="date"> 2026.01.07</span></a>
+                </li>
+                <li>
+                  <a href="#">2025년 국립중앙박물관 일반임기제 공무원(디자인
+                    전문경력관 나군) 경력경쟁채용 공고
+                    <span class="date">2025.12.12</span></a>
+                </li>
+                <li>
+                  <a href="#">국립중앙박물관 &lt;유물멍2&gt; 단행본 위탁출판공고
+                    <span class="date">2025.11.10</span></a>
+                </li>
+                <li>
+                  <a href="#">2025년 하반기 학예사 자격증 및 경력인정대상기관 심의
+                    결과 <span class="date"> 2025.10.31</span></a>
+                </li>
+                <li>
+                  <a href="#">2025년도 국립중앙박물관 한시임기제 6호 공무원
+                    경력경쟁채용 최종합격자 공고
+                    <span class="date"> 2025.10.21</span></a>
+                </li>
+                <li>
+                  <a href="#">2025년 국립중앙박물관 한시임기제 경력경쟁채용시험 일정
+                    변경공고 <span class="date"> 2025.10.16</span></a>
+                </li>
+              </ul>
+              <ul class="blind">
+                <li>
+                  <a href="#">2026년 국립중앙박물관 디자인 전문경력관
+                    나군(일반임기제) 경력경쟁채용시험 서류전형 합격자 및
+                    면접시험 공고 <span class="date">2026.01.07</span></a>
+                </li>
+                <li>
+                  <a href="#">국립공주박물관 학예연구실 기간제근로자(육아휴직
+                    대체인력) 채용 공고
+                    <span class="date">2026.01.06</span></a>
+                </li>
+                <li>
+                  <a href="#">2025년도 제3차 국립중앙박물관 시설관리과 공무직 근로자
+                    채용 추가 합격자 명단 공고(미화)
+                    <span class="date">2026.01.05</span></a>
+                </li>
+                <li>
+                  <a href="#">국립제주박물관 공무직 근로자(교육 보조) 채용 최종합격자
+                    공고 <span class="date"> 2025.12.29 </span></a>
+                </li>
+                <li>
+                  <a href="#">2025년도 제3차 국립중앙박물관 시설관리과 공무직 근로자
+                    채용 추가 합격자 명단 공고(기계)
+                    <span class="date"> 2025.12.29</span></a>
+                </li>
+                <li>
+                  <a href="#">2025년도 제3차 국립중앙박물관 시설관리과 공무직 근로자
+                    채용 최종 합격자 및 후보자 명단 공고
+                    <span class="date"> 2025.12.24</span></a>
+                </li>
+              </ul>
+              <ul class="blind">
+                <li>
+                  <a href="#">[국립전주박물관] 19세기 전주 승금정에서 열린 우아한
+                    시모임의 기록 <span class="date">2026.01.08</span></a>
+                </li>
+                <li>
+                  <a href="#">[국립경주박물관] 국립경주박물관, 2025년 연간 관람객
+                    198만 명 기록 - 30년 만에 최다 관람객 방문, 신라 금관
+                    특별전·APEC 정상회의 등 영향
+                    <span class="date">2026.01.06</span></a>
+                </li>
+                <li>
+                  <a href="#">[국립중앙박물관] 국립중앙박물관, 간송미술관 소장 청대
+                    석사자상 중국 기증 협력
+                    <span class="date">2026.01.06</span></a>
+                </li>
+                <li>
+                  <a href="#">[국립중앙박물관] 국립중앙박물관, 큐레이터와의 대화 1월
+                    프로그램 소개 <span class="date"> 2026.01.06 </span></a>
+                </li>
+                <li>
+                  <a href="#">[국립중앙박물관] 국립중앙박물관, 2025년 연간 관람객
+                    650만 명 돌파 <span class="date"> 2026.01.02</span></a>
+                </li>
+                <li>
+                  <a href="#">[국립중앙박물관] 보존과학 분야 등재학술지 『박물관
+                    보존과학』 제34집 발간
+                    <span class="date"> 2026.01.02</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="notice-swiper">
+            <div class="swiper notice-slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                  <img src="img/noti01.jpg" alt="" />
+                </div>
+                <div class="swiper-slide slide">
+                  <img src="img/noti02.jpg" alt="" />
+                </div>
+              </div>
+
+              <!-- 페이지네이션 -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //notice -->
+    <section id="sec-contents">
+      <div class="inner">
+        <div class="edu">
+          <h2><a href="#">교육</a></h2>
+          <a href="#"><img src="img/modu.png" alt="" /></a>
+          <h3>
+            <a href="#">새로운 교육플랫폼 모두(MODU)를 만나보세요!</a>
+          </h3>
+        </div>
+        <div class="event">
+          <div class="event-top">
+            <h2><a href="#">행사</a></h2>
+            <div class="event-cus swiper-nav">
+              <button class="event-my-prev">
+                <img src="img/btn_swiper_prev.png" alt="" />
+              </button>
+              <div class="event-pagination">
+                <span class="current">1</span>
+                /
+                <span class="total">1</span>
+              </div>
+              <button class="event-my-next">
+                <img src="img/btn_swiper_next.png" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- 전시 슬라이드 영역 -->
+          <div class="swiper eventpage">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide">
+                <img src="img/alpha.jpg" alt="" />
+              </div>
+            </div>
+            <h3><a href="#">가족뮤지컬&lt;알파블록스&gt;</a></h3>
+            <p class="date">2026-01-09 ~ 2026-03-01</p>
+          </div>
+        </div>
+
+        <div class="online">
+          <div class="online-top">
+            <h2>온라인 전시관 <img src="img/ico.plus.png" alt="" /></h2>
+            <div class="online-cus swiper-nav">
+              <button class="online-my-prev">
+                <img src="img/btn_swiper_prev.png" alt="" />
+              </button>
+              <div class="online-pagination">
+                <span class="current">1</span>
+                /
+                <span class="total">1</span>
+              </div>
+              <button class="online-my-next">
+                <img src="img/btn_swiper_next.png" alt="" />
+              </button>
+            </div>
+          </div>
+          <!-- online 슬라이드 영역 -->
+          <div class="swiper onlineslide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide">
+                <img src="img/online01.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3>
+                  <a href="#">[온라인 실감콘텐츠] 왕의행차, 백성과 함께하다</a>
+                </h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online02.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3>
+                  <a href="#">[온라인 실감콘텐츠] 연혼의 여정, 아득한 윤회의 길을
+                    걷다</a>
+                </h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online03.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3>
+                  <a href="#">[온라인 실감콘텐츠] 금강산에 오르다 </a>
+                </h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online04.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3><a href="#">[온라인 실감콘텐츠] 신선들의 잔치</a></h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online05.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3>
+                  <a href="#">[온라인 실감콘텐츠] 돌 벽 위에서 만난 고구려</a>
+                </h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online06.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3>
+                  <a href="#">세계문화관 중국식 - 황하에서 꽃핀 예술</a>
+                </h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online07.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3>
+                  <a href="#">[디지털심감영상관] 실감콘텐츠 '금강산에 오르다' 멀리서
+                    보기</a>
+                </h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online08.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3>
+                  <a href="#">[디지털심감영상관] 실감콘텐츠 '금강산에 오르다' 가까이
+                    보기</a>
+                </h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online09.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3>
+                  <a href="#">[디지털심감영상관] 실감콘텐츠 '왕의 행차, 백성과
+                    함께하다' 멀리서 보기</a>
+                </h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online10.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3>
+                  <a href="#">[디지털심감영상관] 실감콘텐츠 '왕의 행차, 백성과
+                    함께하다' 가까이서 보기</a>
+                </h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online11.png" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3>
+                  <a href="#">세계문화관 인도&middot;동남아시아실 - 인산을 닮은
+                    신들의 세계</a>
+                </h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online12.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3>
+                  <a href="#">세계문화관 중앙아시아실 - 동서문명이 통하는 길</a>
+                </h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online13.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3>
+                  <a href="#">어느 수집가의 초대 고故이건희 회장 기증 1주년 기념전</a>
+                </h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online14.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3><a href="#">조선 사람들의 꿈, 평생도</a></h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online15.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3>
+                  <a href="#">시대의 얼굴, 셰익스피어에서 에드 시런까지</a>
+                </h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online16.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3>
+                  <a href="#">[온라인 실감콘텐츠] 강산에 펼친 풍요로운 세상, 강산
+                    무진도</a>
+                </h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online17.jpg" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3><a href="#">조선의 승려 장인</a></h3>
+              </div>
+              <div class="swiper-slide slide">
+                <img src="img/online18.png" alt="" />
+                <button type="button" class="online-overlay">
+                  <img src="img/ico_videoplay.png" alt="" />
+                </button>
+                <h3><a href="#">외규장각 의궤, 그 고귀함의 의미</a></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- // online -->
+  </main>
+
+  <footer>
+    <section id="ft-top">
+      <div class="inner">
+        <ul class="ft-list">
+          <li class="ft-depth1">
+            <a href="#">관람 정보</a>
+            <ul class="ft-depth2">
+              <li><a href="#">관람 안내</a></li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">전시해설</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 전시 해설 안내</a></li>
+                  <li><a href="#">- 전시 해설 예약</a></li>
+                  <li><a href="#">- 큐레이터와의 대화</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">예약하기</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 어린이박물관 관람 예약</a></li>
+                  <li>
+                    <a href="#">- VR체험 예약 (디지털 실감 영상관 2)</a>
+                  </li>
+                  <li>
+                    <a href="#">- 교육 프로그램 예약
+                      <img src="img/ico_more.png" alt="" /></a>
+                  </li>
+                  <li><a href="#">- 학생 단체 관람 예약</a></li>
+                  <li><a href="#">- 전시 해설 예약</a></li>
+                  <li><a href="#">- 외부해설 예약</a></li>
+                  <li><a href="#">- 시설 대관 예약</a></li>
+                  <li><a href="#">- 야간개장 셔틀버스 예약</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">관람&middot;편의시설</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 박물관 전체 안내</a></li>
+                  <li><a href="#">- 전시 공간</a></li>
+                  <li><a href="#">- 주요 시설</a></li>
+                  <li><a href="#">- 야외 시설</a></li>
+                  <li><a href="#">- 식당, 편의시설</a></li>
+                  <li><a href="#">- 편의시설 연락처</a></li>
+                  <li><a href="#">- 층별 안내</a></li>
+                </ul>
+              </li>
+              <li><a href="#">접근성 안내</a></li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">오시는 길</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 지하철</a></li>
+                  <li><a href="#">- 버스</a></li>
+                  <li><a href="#">- 자기차량</a></li>
+                  <li><a href="#">- 주차 안내</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="ft-depth1">
+            <a href="#">전시</a>
+            <ul class="ft-depth2">
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">상설 전시</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 상설전시실 층별 안내</a></li>
+                  <li><a href="#">- 추천 동선</a></li>
+                  <li><a href="#">- 선사&middot;고대관</a></li>
+                  <li><a href="#">- 중&middot;근세관</a></li>
+                  <li><a href="#">- 서화관</a></li>
+                  <li><a href="#">- 기증관</a></li>
+                  <li><a href="#">- 사유의 방</a></li>
+                  <li><a href="#">- 조각&middot;공예관</a></li>
+                  <li><a href="#">- 세계문화관</a></li>
+                  <li><a href="#">- 역사의 길</a></li>
+                  <li><a href="#">- 야외 전시</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">특별 전시</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 현재 전시</a></li>
+                  <li><a href="#">- 예정 전시</a></li>
+                  <li><a href="#">- 지난 전시</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">디지털 실감 영상관</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 디지털 실감 영상관 안내</a></li>
+                  <li><a href="#">- 실감1관</a></li>
+                  <li><a href="#">- 실감2관</a></li>
+                  <li><a href="#">- 실감3관</a></li>
+                  <li><a href="#">- 디지털 광개토대왕릉비</a></li>
+                  <li><a href="#">- 경천사 십층석탑</a></li>
+                  <li><a href="#">- 명품 실감</a></li>
+                  <li><a href="#">- 열린마당 실감 전광판</a></li>
+                  <li><a href="#">- 온라인 실감콘텐츠</a></li>
+                  <li><a href="#">- 메타버스 박물관 '힐링 동산'</a></li>
+                </ul>
+              </li>
+              <li><a href="#">공간 오감</a></li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">온라인 전시관</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 중앙박물관</a></li>
+                  <li><a href="#">- 소속박물관</a></li>
+                </ul>
+              </li>
+              <li><a href="#">우리문화유산 국외 전시</a></li>
+              <li><a href="#">소속 국립박물관 전시</a></li>
+              <li><a href="#">전시도록</a></li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">외국박물관 소장 한국문화유산</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 미주</a></li>
+                  <li><a href="#">- 유럽</a></li>
+                  <li><a href="#">- 아시아</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="ft-depth1">
+            <a href="#">교육<img src="img/ico_more.png" alt="" /></a>
+            <ul class="ft-depth2">
+              <li>
+                <a href="#">일반교육(MODU) <img src="img/ico_more.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#">전문교육(뮤지엄 아카데미)
+                  <img src="img/ico_more.png" alt="" /></a>
+              </li>
+            </ul>
+          </li>
+          <li class="ft-depth1">
+            <a href="#">문화행사</a>
+            <ul class="ft-depth2">
+              <li><a href="#">행사</a></li>
+              <li><a href="#">공연</a></li>
+            </ul>
+          </li>
+          <li class="ft-depth1">
+            <a href="#">소장품</a>
+            <ul class="ft-depth2">
+              <li><a href="#">큐레이터 추천 소장품</a></li>
+              <li><a href="#">소장품 검색</a></li>
+              <li><a href="#">국보&middot;보물 검색</a></li>
+              <li><a href="#">3D 데이터 검색</a></li>
+              <li><a href="#">수어 동영상</a></li>
+              <li><a href="#">음성 안내</a></li>
+              <li><a href="#">소장품 열람·복제</a></li>
+              <li><a href="#">소장품 대여 안내</a></li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">문화유산 기증 안내</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 기증안내</a></li>
+                  <li><a href="#">- 기증내역/사례</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="ft-depth1">
+            <a href="#">학술행사&middot;출판</a>
+            <ul class="ft-depth2">
+              <li><a href="#">학술행사</a></li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">정기간행물</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 간행물 검색</a></li>
+                  <li><a href="#">- 기획특별전 전시보고서</a></li>
+                  <li><a href="#">- 논문투고</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">고고학</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 조사 연구 현황</a></li>
+                  <li><a href="#">- 발굴 보고서</a></li>
+                  <li><a href="#">- 연구 보고서</a></li>
+                  <li><a href="#">- 학술 토론회 자료</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">역사학</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 조사 연구 현황</a></li>
+                  <li><a href="#">- 외규장각 의궤 총서</a></li>
+                  <li><a href="#">- 연구 보고서</a></li>
+                  <li><a href="#">- 학술 토론회 자료</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">미술사학</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 조사 연구 현황</a></li>
+                  <li><a href="#">- 한국서화도록</a></li>
+                  <li><a href="#">- 한국도자도록</a></li>
+                  <li><a href="#">- 불교미술연구 조사보고</a></li>
+                  <li><a href="#">- 연구 보고서</a></li>
+                  <li><a href="#">- 학술 토론회 자료</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">아시아학</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 조사 연구 현황</a></li>
+                  <li><a href="#">- 연구 보고서</a></li>
+                  <li><a href="#">- 학술 토론회 자료</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">보존과학</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 역할</a></li>
+                  <li><a href="#">- 분야</a></li>
+                  <li><a href="#">- 발간물</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">박물관 교육</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 어린이 전시</a></li>
+                  <li><a href="#">- 교육 연구</a></li>
+                  <li><a href="#">- 교육 아카이브</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">일제 강점기 조사 자료</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 조사 연구 현황</a></li>
+                  <li><a href="#">- 일제 강점기 자료 원문</a></li>
+                  <li><a href="#">- 조사 보고서</a></li>
+                  <li><a href="#">- 문서 자료집</a></li>
+                  <li><a href="#">- 유리건판 자료집</a></li>
+                </ul>
+              </li>
+              <li><a href="#">이건희 기증품</a></li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">도서관</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 도서관 소개</a></li>
+                  <li><a href="#">- 소장도서 검색</a></li>
+                </ul>
+              </li>
+              <li><a href="#">기타</a></li>
+            </ul>
+          </li>
+          <li class="ft-depth1">
+            <a href="#">소식&middot;참여</a>
+            <ul class="ft-depth2">
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">소식</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 알림</a></li>
+                  <li><a href="#">- 고시/공고</a></li>
+                  <li><a href="#">- 채용 안내</a></li>
+                  <li><a href="#">- 보도 자료</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">영상</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 영상 소식</a></li>
+                  <li><a href="#">- 박물관의 특별한 초대</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">자원봉사 안내</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 성인 자원봉사 활동안내</a></li>
+                  <li><a href="#">- 청소년 자원봉사 활동안내</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">청년멘토<img src="img/ico_more.png" alt="" /></a>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">학예사 자격증 안내</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 학예사 자격증 제도 안내</a></li>
+                  <li><a href="#">- 경력인정 대상기관 안내</a></li>
+                  <li><a href="#">- 관계 법령 안내</a></li>
+                </ul>
+              </li>
+              <li><a href="#">전자 민원</a></li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">정보공개</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li>
+                    <a href="#">- 정보공개 제도 안내
+                      <img src="img/ico_more.png" alt="" /></a>
+                  </li>
+                  <li><a href="#">- 비공개 세부기준</a></li>
+                  <li><a href="#">- 정보공개 관련법 및 규정</a></li>
+                  <li><a href="#">- 관련 서식</a></li>
+                  <li><a href="#">- 정보공개 수수료</a></li>
+                  <li><a href="#">- 사전정보공표</a></li>
+                  <li><a href="#">- 정보공개 자료</a></li>
+                  <li>
+                    <a href="#">- 정보공개 청구신청
+                      <img src="img/ico_more.png" alt="" /></a>
+                  </li>
+                  <li><a href="#">- 공공데이터 개방</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">소식지 시설</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 박물관신문</a></li>
+                  <li><a href="#">- 큐레이터가 보내는 엽서</a></li>
+                  <li><a href="#">- NMK Magazine</a></li>
+                  <li><a href="#">- 아침 행복이 똑똑</a></li>
+                </ul>
+              </li>
+              <li><a href="#">안전 제안 창구</a></li>
+            </ul>
+          </li>
+          <li class="ft-depth1">
+            <a href="#">박물관 소개</a>
+            <ul class="ft-depth2">
+              <li><a href="#">인사말</a></li>
+              <li><a href="#">비전과 전략</a></li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">발자취</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 1945~</a></li>
+                  <li><a href="#">- 1955~</a></li>
+                  <li><a href="#">- 1972~</a></li>
+                  <li><a href="#">- 1986~</a></li>
+                  <li><a href="#">- 1996~</a></li>
+                  <li><a href="#">- 2005~</a></li>
+                </ul>
+              </li>
+              <li><a href="#">조직 및 업무</a></li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">시설 소개</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 건축 개요</a></li>
+                  <li><a href="#">- 배치 현황</a></li>
+                  <li><a href="#">- 층별 상세</a></li>
+                  <li><a href="#">- 시설 개요</a></li>
+                  <li><a href="#">- 주요 특징</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">수장고</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 수장고 소개</a></li>
+                  <li><a href="#">- 수장고 현황</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="ft-depth2-menu">
+                  <a href="#">박물관 관련 자료</a>
+                  <img src="img/ico_open.png" alt="" />
+                </div>
+                <ul class="ft-depth3">
+                  <li><a href="#">- 연보</a></li>
+                  <li><a href="#">- 규정 등</a></li>
+                  <li><a href="#">- 법령자료실</a></li>
+                  <li><a href="#">- 박물관 기념사업</a></li>
+                </ul>
+              </li>
+              <li><a href="#">문화유산 표준관리시스템</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="ft-site">
+          <li>
+            <a href="#">_어린이박물관 <img src="img/ico_more.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#">_교육플랫폼 모두 <img src="img/ico_more.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#">_학예사자격증 <img src="img/ico_more.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#">_e뮤지엄 <img src="img/ico_more.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#">_외규장각 의궤 원문 <img src="img/ico_more.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#">_조선총독부박물관 문서 <img src="img/ico_more.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#">_유리건판 <img src="img/ico_more.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#">_박물관신문 <img src="img/ico_more.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#">_박물관상품관 <img src="img/ico_more.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#">_청년멘토 <img src="img/ico_more.png" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- //ft-top -->
+
+    <section id="ft-main">
+      <div class="inner">
+        <div class="ft-menu">
+          <p><a href="#">문화유산표준관리시스템</a></p>
+        </div>
+        <div class="ft-menu">
+          <ul class="ft-menu-depth1">
+            <li class="ft-menu-depth1-open">
+              <div class="ft-link">
+                <a href="#">관련사이트 바로가기<span><i class="fa-solid fa-angle-up"></i></span></a>
+              </div>
+              <ul class="ft-menu-depth2">
+                <li><a href="#">국립박물관 문화재단</a></li>
+                <li><a href="#">국립중앙박물관회</a></li>
+                <li><a href="#">사단법인 한국박물관협회</a></li>
+              </ul>
+            </li>
+            <li class="ft-menu-depth1-open">
+              <div class="ft-link">
+                <a href="#">소속박물관 바로가기<span><i class="fa-solid fa-angle-up"></i></span></a>
+              </div>
+              <ul class="ft-menu-depth2">
+                <li><a href="#">국립경주박물관</a></li>
+                <li><a href="#">국립광주박물관</a></li>
+                <li><a href="#">국립전주박물관</a></li>
+                <li><a href="#">국립대구박물관</a></li>
+                <li><a href="#">국립부여박물관</a></li>
+                <li><a href="#">국립공주박물관</a></li>
+                <li><a href="#">국립진주박물관</a></li>
+                <li><a href="#">국립청주박물관</a></li>
+                <li><a href="#">국립김해박물관</a></li>
+                <li><a href="#">국립제주박물관</a></li>
+                <li><a href="#">국립춘천박물관</a></li>
+                <li><a href="#">국립나주박물관</a></li>
+                <li><a href="#">국립익산박물관</a></li>
+              </ul>
+            </li>
+            <li class="ft-menu-depth1-open">
+              <div class="ft-link">
+                <a href="#">안내도(PDF) 내려받기<span><i class="fa-solid fa-angle-up"></i></span></a>
+              </div>
+              <ul class="ft-menu-depth2">
+                <li><a href="#">한국어(PDF)</a></li>
+                <li><a href="#">English(PDF)</a></li>
+                <li><a href="#">中文(PDF)</a></li>
+                <li><a href="#">日本語(PDF)</a></li>
+                <li><a href="#">Français(PDF)</a></li>
+                <li><a href="#">Deutsche(PDF)</a></li>
+                <li><a href="#">Español(PDF)</a></li>
+                <li><a href="#">박물관 야외정원 안내</a></li>
+                <li><a href="#">Recommended Routes</a></li>
+                <li><a href="#">推荐路线</a></li>
+                <li><a href="#">おすすめ散策コース</a></li>
+                <li><a href="#">프로그램(11월~26년1월)</a></li>
+              </ul>
+            </li>
+            <li class="ft-menu-depth1-open">
+              <div class="ft-link">
+                <a href="#">소속박물관 뉴스레터<span><i class="fa-solid fa-angle-up"></i></span></a>
+              </div>
+              <ul class="ft-menu-depth2">
+                <li><a href="#">국립경주박물관</a></li>
+                <li><a href="#">국립광주박물관</a></li>
+                <li><a href="#">국립전주박물관</a></li>
+                <li><a href="#">국립대구박물관</a></li>
+                <li><a href="#">국립부여박물관</a></li>
+                <li><a href="#">국립공주박물관</a></li>
+                <li><a href="#">국립진주박물관</a></li>
+                <li><a href="#">국립청주박물관</a></li>
+                <li><a href="#">국립김해박물관</a></li>
+                <li><a href="#">국립제주박물관</a></li>
+                <li><a href="#">국립춘천박물관</a></li>
+                <li><a href="#">국립나주박물관</a></li>
+                <li><a href="#">국립익산박물관</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="ft-menu">
+          <ul class="info-list">
+            <li class="m-open">
+              <a href="#"><strong>개인정보처리방침</strong></a>
+            </li>
+            <li><a href="#">영상정보처리기기 운영·관리 규정</a></li>
+            <li class="m-open"><a href="#">이용약관</a></li>
+            <li><a href="#">전자민원</a></li>
+            <li><a href="#">공공데이터개방</a></li>
+            <li><a href="#">저작권정책</a></li>
+            <li><a href="#">클린신고센터</a></li>
+            <li class="m-open"><a href="#">찾아오시는길</a></li>
+          </ul>
+        </div>
+        <div class="ft-menu">
+          <ul class="ft-sns">
+            <li>
+              <a href="#"><img src="img/imgi_40_naver.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/imgi_41_twitter.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/imgi_42_facebook.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/imgi_43_instagram.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/imgi_44_youtube.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/imgi_45_book_footer.svg" alt="" /></a>
+            </li>
+          </ul>
+          <p class="address">
+            04383 서울시 용산구 서빙고로 137(용산동6가 168-6)<br />
+            대표전화 02-2077-9000
+          </p>
+          <p class="copy">&copy;National Museum of Korea.</p>
+          <ul class="ft-pt">
+            <li>
+              <a><img src="img/ft_web_access.png" alt="" class="acc" /></a>
+            </li>
+            <li>
+              <a><img src="img/ft_logo_open.png" alt="" class="open" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <!-- 마우스커서 -->
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  <div class="ball"></div>
+  </div>
+
+  <a href="index.html" class="btn-top">
+    <img src="img/imgi_85_btn_top.png" alt="" />
+  </a>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

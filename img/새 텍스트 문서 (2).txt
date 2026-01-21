@@ -1,0 +1,13 @@
+h1
+h2 - noto re 40px #222222 
+h3 - noto mi 24px #222222 
+p - noto demi 20px #666666
+color
+
+fontcolor
+#222222
+#666666
+inner
+1440
+top inner
+1440 47

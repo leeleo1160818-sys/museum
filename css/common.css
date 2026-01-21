@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+/* 공통 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.inner {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: #222222;
+}
+
+h3 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #222222;
+}
+
+p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #666666;
+}
+
+.btn {
+    position: relative;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #3f0b9f;
+    padding: 8px 6px 28px 7px;
+    border-bottom: 3px solid #3f0b9f;
+    overflow: hidden;
+    background: none;
+    transition: all 0.3s ease;
+}
+
+.btn::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: #3f0b9f;
+    content: '';
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.btn:hover::before {
+    height: 100%;
+}
+
+section+section {
+    margin-bottom: 100px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+.btn-top {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
