@@ -1,11 +1,12 @@
-.inner {
-  width: 90%;
+section+section {
+    margin-bottom: 20px;
 }
+
 
 /* 헤더 */
 header {
   position: relative;
-  margin-bottom: 53px;
+  margin-bottom: 20px;
 }
 
 .gnb-area {
@@ -57,7 +58,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 430px;
+  width: 390px;
   height: 100%;
   background: #fff;
   z-index: 5000;
@@ -82,7 +83,7 @@ header {
   position: relative;
 }
 
-.m-gnb-top .lang > a {
+.m-gnb-top .lang>a {
   display: inline-block;
   font-size: 14px;
   padding: 0 0 30px 20px;
@@ -159,10 +160,11 @@ header {
 /* 상단 영역 (로고 + 닫기) */
 
 .search-layer {
-  width: 430px;
+  width: 390px;
 }
+
 .search-top {
-  max-width: 430px;
+  max-width: 390px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -224,13 +226,13 @@ header {
 
 /* m-list */
 
-.m-list > li {
+.m-list>li {
   margin-top: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ccc;
 }
 
-.m-list > li:last-child {
+.m-list>li:last-child {
   border-bottom: none;
 }
 
@@ -251,6 +253,7 @@ header {
 .m-close-btn img {
   width: 20px;
 }
+
 
 /* header link */
 
@@ -303,11 +306,11 @@ main h2 {
   height: 350px;
   display: inline-block;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .main-visual h3 {
-  padding-top: 30px;
+  padding-top: 10px;
   font-size: 21px;
 }
 
@@ -327,7 +330,7 @@ main h2 {
 .exh-textbox {
   display: flex;
   flex-direction: column;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
   border-bottom: solid 1px #c8c8c8;
 }
 
@@ -341,7 +344,7 @@ main h2 {
 
 .info {
   width: 100%;
-  padding: 55px 0 40px 0;
+  padding: 25px 0 20px 0;
   border-bottom: solid 1px #e9e9e9;
   display: block;
 }
@@ -442,8 +445,13 @@ main h2 {
 /* ==================================================================================================================== */
 /* ft-top */
 
+.ft-site {
+  display: block;
+  margin: 10px 0 0;
+}
+
 .ft-site li {
-  width: 50%;
+  width: 100%;
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 500;
@@ -454,7 +462,6 @@ main h2 {
 .ft-site li img {
   height: 20px;
 }
-
 /* ft-main */
 
 #ft-main .inner {
@@ -612,4 +619,9 @@ main h2 {
   height: auto;
   max-width: 100%;
   max-height: 100%;
+}
+
+/* 마우스 */
+.ball {
+display: none;
 }
