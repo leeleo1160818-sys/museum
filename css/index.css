@@ -390,7 +390,7 @@ header {
     height: 100%;
     background: url('../img/imgi_51_bg_search.png') no-repeat center/cover;
     display: none;
-    z-index: 3000;
+    z-index: 9000;
 }
 
 
