@@ -340,6 +340,7 @@ header {
 .text-area span {
   font-size: 15px;
   font-weight: 400;
+  margin-right: 35px;
   color: #222;
 }
 
