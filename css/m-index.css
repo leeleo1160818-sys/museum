@@ -144,6 +144,7 @@ header {
   position: fixed;
   inset: 0;
   z-index: 3000;
+  width: 390px;
 }
 
 /* 배경 전용 레이어 */
@@ -154,12 +155,6 @@ header {
   background: url("../img/imgi_51_bg_search.png") no-repeat center / cover;
   opacity: 0.85;
   pointer-events: none;
-}
-
-/* 상단 영역 (로고 + 닫기) */
-
-.search-layer {
-  width: 390px;
 }
 
 .search-top {

@@ -183,12 +183,15 @@ header {
   background: url("../img/imgi_51_bg_search.png") no-repeat center / cover;
   opacity: 0.85;
   pointer-events: none;
+  z-index: -1;
 }
 
+/* 상단 영역 (로고 + 닫기) */
 .search-top {
   max-width: 100%;
   padding: 60px 20px 0;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 /* 폼 */
@@ -680,5 +683,5 @@ main h2 {
 
 /* 마우스 */
 .ball {
-display: none;
+  display: none;
 }
