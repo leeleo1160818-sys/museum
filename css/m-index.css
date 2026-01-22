@@ -1,7 +1,6 @@
-section+section {
-    margin-bottom: 20px;
+section + section {
+  margin-bottom: 20px;
 }
-
 
 /* 헤더 */
 header {
@@ -83,7 +82,7 @@ header {
   position: relative;
 }
 
-.m-gnb-top .lang>a {
+.m-gnb-top .lang > a {
   display: inline-block;
   font-size: 14px;
   padding: 0 0 30px 20px;
@@ -226,13 +225,13 @@ header {
 
 /* m-list */
 
-.m-list>li {
+.m-list > li {
   margin-top: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ccc;
 }
 
-.m-list>li:last-child {
+.m-list > li:last-child {
   border-bottom: none;
 }
 
@@ -293,8 +292,8 @@ header {
 
 .mainvisual .swiper-pagination {
   position: absolute;
-  right: 40px;
-  bottom: 30px;
+  right: 30px;
+  bottom: 45px;
   left: auto;
   width: auto;
 }
@@ -619,14 +618,14 @@ header {
   width: 100%;
 }
 
-.ft-menu>p {
+.ft-menu > p {
   font-size: 18px;
   font-weight: 500;
   color: #000;
   margin-bottom: 20px;
 }
 
-.ft-menu>p>a:hover {
+.ft-menu > p > a:hover {
   text-decoration: underline;
 }
 
@@ -768,5 +767,5 @@ header {
 
 /* 마우스 */
 .ball {
-display: none;
+  display: none;
 }

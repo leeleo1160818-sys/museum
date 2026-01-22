@@ -1,7 +1,6 @@
-section+section {
-    margin-bottom: 20px;
+section + section {
+  margin-bottom: 20px;
 }
-
 
 /* 헤더 */
 header {
@@ -83,7 +82,7 @@ header {
   position: relative;
 }
 
-.m-gnb-top .lang>a {
+.m-gnb-top .lang > a {
   display: inline-block;
   font-size: 14px;
   padding: 0 0 30px 20px;
@@ -226,13 +225,13 @@ header {
 
 /* m-list */
 
-.m-list>li {
+.m-list > li {
   margin-top: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ccc;
 }
 
-.m-list>li:last-child {
+.m-list > li:last-child {
   border-bottom: none;
 }
 
@@ -253,7 +252,6 @@ header {
 .m-close-btn img {
   width: 20px;
 }
-
 
 /* header link */
 
@@ -295,7 +293,7 @@ header {
 
 /* ==================================================================================================================== */
 main h2 {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 600;
   color: #222222;
   margin-bottom: 20px;
@@ -310,7 +308,7 @@ main h2 {
 }
 
 .main-visual h3 {
-  padding-top: 10px;
+  padding-top: 30px;
   font-size: 21px;
 }
 
@@ -623,5 +621,5 @@ main h2 {
 
 /* 마우스 */
 .ball {
-display: none;
+  display: none;
 }
