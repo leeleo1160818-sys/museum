@@ -85,118 +85,116 @@ section:last-child {
 
 /* 헤더 */
 header {
-    position: relative;
-    margin-bottom: 53px;
+  position: relative;
+  margin-bottom: 53px;
 }
 
 .header-top {
-    background: #edf1f5;
+  background: #edf1f5;
 }
 
 .header-top .inner {
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .header-top .inner img {
-    width: 27px;
+  width: 27px;
 }
 
 .header-top .inner p {
-    font-size: 16px;
-    font-weight: 400;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .header-link {
-    padding: 10px 0;
-    margin-bottom: 20px;
+  padding: 10px 0;
+  margin-bottom: 20px;
 }
 
-.header-link>ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 5px;
-    font-size: 14px;
-    color: #444444;
-
+.header-link > ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #444444;
 }
 
-.header-link>ul>li {
-    padding: 12px 8px 15px;
-    border-top: 3px solid #222222;
+.header-link > ul > li {
+  padding: 12px 8px 15px;
+  border-top: 3px solid #222222;
 }
 
 .d-link {
-    position: relative;
+  position: relative;
 }
 
 .d-link.active {
-    background: #000;
-    color: #fff;
+  background: #000;
+  color: #fff;
 }
 
-.d-link.active>a i {
-    transform: rotate(180deg);
+.d-link.active > a i {
+  transform: rotate(180deg);
 }
 
 .d-link ul {
-    display: none;
-    width: 100%;
-    position: absolute;
-    top: 47.4px;
-    left: 0;
-    background: #000;
-    color: #ccc;
-    text-align: center;
-    z-index: 200;
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 47.4px;
+  left: 0;
+  background: #000;
+  color: #ccc;
+  text-align: center;
+  z-index: 200;
 }
 
 .d-link ul li {
-    padding: 12px;
+  padding: 12px;
 }
 
 .d-link ul li:hover {
-    color: gold;
-    text-decoration: underline;
+  color: gold;
+  text-decoration: underline;
 }
 
 .lang {
-    position: relative;
+  position: relative;
 }
 
 .lang.active {
-    background: #000;
-    color: #fff;
+  background: #000;
+  color: #fff;
 }
 
-.lang.active>a i {
-    transform: rotate(180deg);
+.lang.active > a i {
+  transform: rotate(180deg);
 }
 
 .lang ul {
-    display: none;
-    width: 100%;
-    position: absolute;
-    top: 47.4px;
-    left: 0;
-    background: #000;
-    color: #ccc;
-    text-align: center;
-    z-index: 200;
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 47.4px;
+  left: 0;
+  background: #000;
+  color: #ccc;
+  text-align: center;
+  z-index: 200;
 }
 
 .lang ul li {
-    padding: 10px;
+  padding: 10px;
 }
 
 .lang ul li:hover {
-    color: gold;
-    text-decoration: underline;
+  color: gold;
+  text-decoration: underline;
 }
-
 
 .gnb-area {
   width: 100%;
@@ -206,7 +204,6 @@ header {
   z-index: 1;
 }
 
-
 .gnb-area.fixed {
   position: fixed;
   top: 0;
@@ -214,83 +211,82 @@ header {
   width: 100%;
 }
 
-
 .gnb-area > .inner {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding-bottom: 15px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 15px;
 }
 .gnb-area .gnb {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
 }
 
-.gnb-area .gnb>li {
-    font-size: 22px;
-    color: #222222;
-    font-weight: 500;
-    padding-bottom: 5px;
-    border-bottom: 5px solid transparent;
+.gnb-area .gnb > li {
+  font-size: 22px;
+  color: #222222;
+  font-weight: 500;
+  padding-bottom: 5px;
+  border-bottom: 5px solid transparent;
 }
 
-.gnb-area .gnb>li:hover {
-    color: #3f0b9f;
-    border-bottom: 5px solid #3f0b9f;
+.gnb-area .gnb > li:hover {
+  color: #3f0b9f;
+  border-bottom: 5px solid #3f0b9f;
 }
 
 .util ul {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 
 .search {
-    background: none;
-    cursor: default;
+  background: none;
+  cursor: default;
 }
 
 .gnb .depth2 {
-    display: none;
-    width: calc(100% - 270px);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #000;
-    padding: 10px 0 10px 270px;
-    color: #fff;
-    gap: 30px;
-    height: 33px;
-    align-items: center;
-    z-index: 100;
+  display: none;
+  width: calc(100% - 270px);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #000;
+  padding: 10px 0 10px 270px;
+  color: #fff;
+  gap: 30px;
+  height: 33px;
+  align-items: center;
+  z-index: 100;
 }
 
 .gnb .depth2 li {
-    position: relative;
-    padding: 8px 0;
-    font-size: 15px;
-    font-weight: 400;
+  position: relative;
+  padding: 8px 0;
+  font-size: 15px;
+  font-weight: 400;
 }
 
-.gnb .depth2>li::after {
-    width: 18px;
-    height: 5px;
-    background-color: gold;
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    content: '';
-    display: none;
+.gnb .depth2 > li::after {
+  width: 18px;
+  height: 5px;
+  background-color: gold;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  display: none;
 }
 
-.gnb .depth2>li>a {
-    transition: all 0.3s;
+.gnb .depth2 > li > a {
+  transition: all 0.3s;
 }
 
-.gnb .depth2>li:hover>a {
-    color: gold;
+.gnb .depth2 > li:hover > a {
+  color: gold;
 }
 /* 2차 메뉴 li hover 시 3차 메뉴 열기 */
 .gnb .depth2 li:hover > .depth3 {
@@ -879,6 +875,11 @@ main h2 {
 .ft-pt .open {
   width: 95px;
   height: 40px;
+}
+
+.btn-top img {
+  padding: 0;
+  margin: 0;
 }
 
 /* 마우스테스트 */
