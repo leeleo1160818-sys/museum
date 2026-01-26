@@ -1,88 +1,5 @@
 @charset "utf-8";
 
-/* 공통 */
-body {
-  font-family: "Noto Sans KR", sans-serif;
-}
-
-.inner {
-  width: 1440px;
-  margin: 0 auto;
-}
-
-h2 {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 40px;
-  font-weight: 400;
-  color: #222222;
-}
-
-h3 {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  color: #222222;
-}
-
-p {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: #666666;
-}
-
-.btn {
-  position: relative;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 32px;
-  font-weight: bold;
-  color: #3f0b9f;
-  padding: 8px 6px 28px 7px;
-  border-bottom: 3px solid #3f0b9f;
-  overflow: hidden;
-  background: none;
-  transition: all 0.3s ease;
-}
-
-.btn::before {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0;
-  background-color: #3f0b9f;
-  content: "";
-  transition: all 0.3s ease;
-  z-index: -1;
-}
-
-.btn:hover {
-  color: #fff;
-}
-
-.btn:hover::before {
-  height: 100%;
-}
-
-section + section {
-  margin-bottom: 100px;
-}
-
-section:last-child {
-  margin-bottom: 0;
-}
-
-.btn-top {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background: none;
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
-
 /* 헤더 */
 header {
   position: relative;
@@ -476,6 +393,102 @@ header {
 }
 /*=================================================================================================================  */
 
+main .inner > h2 {
+  font-size: 40px;
+  color: #222222;
+  font-weight: 600;
+  margin-bottom: 60px;
+  padding: 10px 15px;
+}
+
+main .inner > p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+main .inner > p > span {
+  color: #970119;
+  font-weight: 500;
+}
+
+main .inner .btn {
+  font-size: 18px;
+  padding: 7px 2px;
+  border-bottom: 1px solid #3f0b9f;
+  margin-bottom: 30px;
+}
+
+#floor h3 {
+  font-size: 72px;
+  font-weight: 500;
+  padding-bottom: 23px;
+  color: #3f0b9f;
+}
+
+#floor h3 span {
+  font-size: 48px;
+  font-weight: 500;
+  padding-left: 0;
+  color: #3f0b9f;
+}
+
+#floor .inner {
+  border-top: solid 1px #dddddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0px 142px 0px;
+}
+
+#floor .inner > div {
+  width: 33.3%;
+  padding: 0 2%;
+  margin-bottom: 46px;
+}
+
+#floor .inner > div:nth-child(1) {
+  padding-left: 0;
+}
+
+#floor .inner > div:nth-child(3) {
+  padding-right: 0;
+}
+
+#floor .inner > div + div {
+  border-left: 1px solid #efefef;
+}
+
+.floor-info li {
+  margin-bottom: 46px;
+}
+.floor-info li a {
+  position: relative;
+}
+
+.floor-info li img {
+  width: 100%;
+  height: 100%;
+}
+.floor-info li a span {
+  position: absolute;
+  padding: 24px;
+  left: 0;
+  bottom: 100px;
+  font-size: 32px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.text {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  color: #666666;
+  line-height: 28px;
+  padding-top: 20px;
+  height: 80px;
+}
 /*=================================================================================================================  */
 /* ft-top */
 #ft-top .inner {
