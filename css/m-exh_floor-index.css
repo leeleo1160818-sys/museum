@@ -369,10 +369,10 @@ main .inner .btn {
 }
 .floor-info li a span {
   position: absolute;
-  padding: 20px;
-  left: 0;
-  bottom: 95px;
-  font-size: 25px;
+  padding: 0px;
+  left: 15px;
+  bottom: 105px;
+  font-size: 20px;
   color: #fff;
   text-shadow: 1px 1px 1px #333;
 }
