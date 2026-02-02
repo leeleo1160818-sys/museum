@@ -303,7 +303,7 @@ header {
 }
 
 #int .inner h3 {
-  font-size: 30px;
+  font-size: 33px;
   font-weight: 400;
   color: #202020;
   margin-bottom: 50px;
@@ -324,6 +324,7 @@ figure .PC {
 figure .mobile {
   width: 100%;
   display: block;
+  margin-bottom: 30px;
 }
 .text-area {
   width: 100%;
