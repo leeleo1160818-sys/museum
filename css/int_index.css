@@ -393,105 +393,73 @@ header {
 }
 /*=================================================================================================================  */
 
-main .inner > h2 {
+#int .inner {
+  padding-block: 50px 100px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+#int .inner h2 {
   font-size: 40px;
-  color: #222222;
   font-weight: 600;
+  color: #222222;
   margin-bottom: 60px;
-  padding: 10px 15px;
 }
 
-main .inner > p {
-  font-size: 20px;
-  font-weight: 400;
-  color: #666666;
-  margin-bottom: 20px;
-}
-
-main .inner > p > span {
-  color: #970119;
-  font-weight: 500;
-}
-
-main .inner .btn {
-  font-size: 18px;
-  padding: 7px 2px;
-  border-bottom: 1px solid #3f0b9f;
-  margin-bottom: 30px;
-}
-
-#floor h3 {
-  font-size: 72px;
-  font-weight: 500;
-  padding-bottom: 23px;
-  color: #3f0b9f;
-}
-
-#floor h3 span {
-  font-size: 48px;
-  font-weight: 500;
-  padding-left: 0;
-  color: #3f0b9f;
-}
-
-#floor .inner {
-  border-top: solid 1px #dddddd;
-  display: flex;
-  justify-content: space-between;
-  padding: 50px 0px 142px 0px;
-}
-
-#floor .inner > div {
-  width: 33.3%;
-  padding: 0 2%;
-  margin-bottom: 46px;
-}
-
-#floor .inner > div:nth-child(1) {
-  padding-left: 0;
-}
-
-#floor .inner > div:nth-child(3) {
-  padding-right: 0;
-}
-
-#floor .inner > div + div {
-  border-left: 1px solid #efefef;
-}
-
-.floor-info li {
-  margin-bottom: 46px;
-}
-.floor-info li a {
-  position: relative;
-}
-
-.floor-info li .exh-top {
-  position: relative;
-}
-
-.floor-info li img {
-  width: 100%;
-  height: 100%;
-}
-.floor-info li a span {
-  position: absolute;
-  padding: 24px;
-  left: 0;
-  bottom: 10px;
+#int .inner h3 {
   font-size: 32px;
-  color: #fff;
-  text-shadow: 1px 1px 1px #333;
+  font-weight: 400;
+  color: #202020;
+  margin-bottom: 50px;
 }
 
-.text {
-  display: block;
-  font-size: 18px;
+#int .inner h3 strong {
+  font-size: 35px;
+}
+
+.int-main {
+  display: flex;
+}
+
+figure .mobile {
+  display: none;
+}
+.text-area {
+  width: calc(100% - 480px);
+  padding: 0px 0px 0px 72px;
+}
+
+.text-area h4 {
+  font-size: 26px;
+  font-weight: 400;
+  color: #222222;
+  margin-bottom: 40px;
+}
+
+.text-area .text {
+  margin-bottom: 40px;
+  font-size: 16px;
   font-weight: 400;
   color: #666666;
   line-height: 28px;
-  padding-top: 20px;
-  height: 80px;
+  word-break: keep-all;
+}
+
+.text-area span {
+  font-size: 24px;
+  color: #000;
+  font-weight: 500;
+  padding-bottom: 18px;
+  display: block;
+  line-height: 32px;
+}
+
+.text-area p:last-child {
+  text-align: right;
+}
+
+.text-area img {
+  text-align: right;
+  height: 55px;
 }
 /*=================================================================================================================  */
 /* ft-top */

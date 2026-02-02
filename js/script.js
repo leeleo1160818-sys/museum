@@ -1,7 +1,7 @@
 /* 마우스커서 */
 const balls = document.querySelectorAll(".ball");
 
-window.addEventListener("mousemove", (e) => {
+window.addEventListener("mousemove", e => {
   balls.forEach((ball, index) => {
     const rx = gsap.utils.random(-50, 50);
     const ry = gsap.utils.random(-50, 50);
@@ -21,7 +21,6 @@ window.addEventListener("mousemove", (e) => {
     });
   });
 });
-
 
 /* 헤더탑 */
 $(".d-link").on("click", function () {
@@ -51,18 +50,18 @@ const allDepth3 = document.querySelectorAll(".depth3");
 const gnbArea = document.querySelector(".gnb-area");
 
 // depth2만 초기 숨김 처리
-allDepth2.forEach((menu) => {
+allDepth2.forEach(menu => {
   menu.style.display = "none";
 });
 
 // depth1 hover 제어
-depth1Items.forEach((item) => {
+depth1Items.forEach(item => {
   item.addEventListener("mouseenter", () => {
-    allDepth2.forEach((menu) => {
+    allDepth2.forEach(menu => {
       menu.style.display = "none";
     });
 
-    allDepth3.forEach((menu) => {
+    allDepth3.forEach(menu => {
       menu.style.display = "none";
     });
 
@@ -73,11 +72,11 @@ depth1Items.forEach((item) => {
   });
 });
 
-allDepth3.forEach((depth3) => {
+allDepth3.forEach(depth3 => {
   const parentLi = depth3.parentElement;
 
   parentLi.addEventListener("mouseenter", () => {
-    allDepth3.forEach((menu) => {
+    allDepth3.forEach(menu => {
       menu.style.display = "none";
     });
 
@@ -91,11 +90,11 @@ allDepth3.forEach((depth3) => {
 
 // 영역 벗어나면 전부 닫기
 gnbArea.addEventListener("mouseleave", () => {
-  allDepth2.forEach((menu) => {
+  allDepth2.forEach(menu => {
     menu.style.display = "none";
   });
 
-  allDepth3.forEach((menu) => {
+  allDepth3.forEach(menu => {
     menu.style.display = "none";
   });
 });
@@ -114,32 +113,33 @@ $(function () {
 });
 
 /* gnb상단 고정 이건 (아직 모르겠다;) */
-window.addEventListener("load", () => { // 1. 모든 리소스 로드 후 실행 (위치 계산 정확도 UP)
-    const gnbArea = document.querySelector(".gnb-area");
-    
-    // 2. 안전장치: 이 페이지에 .gnb-area가 있을 때만 실행해!
-    if (gnbArea) {
-        let stickyStart = gnbArea.offsetTop;
+window.addEventListener("load", () => {
+  // 1. 모든 리소스 로드 후 실행 (위치 계산 정확도 UP)
+  const gnbArea = document.querySelector(".gnb-area");
 
-        window.addEventListener("scroll", () => {
-            const scTop = window.scrollY;
+  // 2. 안전장치: 이 페이지에 .gnb-area가 있을 때만 실행해!
+  if (gnbArea) {
+    let stickyStart = gnbArea.offsetTop;
 
-            if (scTop >= stickyStart) {
-                gnbArea.classList.add("fixed");
-                document.body.style.paddingTop = gnbArea.offsetHeight + "px";
-            } else {
-                gnbArea.classList.remove("fixed");
-                document.body.style.paddingTop = "0";
-            }
-        });
+    window.addEventListener("scroll", () => {
+      const scTop = window.scrollY;
 
-        // 리사이즈할 때 위치 다시 잡기
-        window.addEventListener("resize", () => {
-            if (!gnbArea.classList.contains("fixed")) {
-                stickyStart = gnbArea.offsetTop;
-            }
-        });
-    }
+      if (scTop >= stickyStart) {
+        gnbArea.classList.add("fixed");
+        document.body.style.paddingTop = gnbArea.offsetHeight + "px";
+      } else {
+        gnbArea.classList.remove("fixed");
+        document.body.style.paddingTop = "0";
+      }
+    });
+
+    // 리사이즈할 때 위치 다시 잡기
+    window.addEventListener("resize", () => {
+      if (!gnbArea.classList.contains("fixed")) {
+        stickyStart = gnbArea.offsetTop;
+      }
+    });
+  }
 });
 
 /* 푸터 top*/
@@ -195,6 +195,149 @@ $(".m-list-open").on("click", function (e) {
   $this.toggleClass("active");
   $sub.stop().slideToggle(250);
 });
+
+/* 이벤트json */
+function fetchEvents() {
+  fetch("https://69772b3a5b9c0aed1e859570.mockapi.io/performances")
+    .then(res => res.json())
+    .then(data => {
+      allData = data;
+      renderData(data);
+      //console.log(data);
+    });
+}
+
+//원본 보관용
+let allData = [];
+
+/* =====================================
+   1. 날짜 변환 함수
+=====================================*/
+function toDate(dateStr) {
+  // .을 -로 바꿔줘야 "yyyy-mm-dd" 형식이 돼!
+  const cleanDate = dateStr.replaceAll(".", "-").trim();
+  return new Date(cleanDate + "T00:00:00");
+}
+
+/* =====================================
+   2. 화면 출력 함수
+=====================================*/
+function renderData(data) {
+  const listContainer = document.querySelector(".event-list");
+  const countSpan = document.querySelector(".result span");
+
+  // 1. 개수 업데이트
+  countSpan.textContent = data.length;
+
+  const today = new Date();
+
+  const html = data
+    .map(item => {
+      // --- [날짜 로직: 배운 방식 응용] ---
+      const dates = item.period.split(" ~ ");
+      const targetDateStr = dates.length === 2 ? dates[1] : dates[0];
+      const endDate = toDate(targetDateStr);
+      endDate.setHours(23, 59, 59);
+
+      let statusText = "";
+      let statusClass = "";
+
+      if (today > endDate) {
+        statusText = item.category === "performance" ? "지난 공연" : "지난 행사";
+        statusClass = "expired";
+      } else {
+        statusText = item.category === "performance" ? "공연 중" : "행사 중";
+        statusClass = "on";
+      }
+
+      // --- HTML 출력 ---
+      return `
+    <li class="event-card">
+        <div class="card-image">
+          <a href=""><img src="${item.image}" alt="${item.title}"></a>
+        </div>
+        <div class="card-content">
+          <span class="status-tag ${statusClass}">
+            ${statusText}
+          </span>
+          <a href=""><h3 class="card-title">${item.title}</h3></a> 
+          <dl class="card-info">
+            <div class="info-row">
+              <dt>장소</dt>
+              <dd>${item.place}</dd>
+            </div>
+            <div class="info-row">
+              <dt>기간</dt>
+              <dd>${item.period}</dd>
+            </div>
+            <div class="info-row">
+              <dt>입장료</dt>
+              <dd>${item.price}</dd>
+            </div>
+          </dl>
+        </div>
+    </li>
+    `;
+    })
+    .join("");
+
+  listContainer.innerHTML = html;
+}
+
+// 버튼 필터링 이벤트
+const filterButtons = document.querySelectorAll(".btn-area button");
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", e => {
+    // 버튼 디자인 변경
+    filterButtons.forEach(b => b.classList.remove("active"));
+    e.target.classList.add("active");
+
+    const category = e.target.getAttribute("data-filter");
+
+    // 전체면 allData 다 보여주고, 아니면 필터링해서 보여주기
+    const filtered = category === "all" ? allData : allData.filter(item => item.category === category);
+
+    renderData(filtered);
+  });
+});
+fetchEvents();
+
+// 검색 기능 (event-search-form 전용)
+const eventForm = document.querySelector(".event-search-form");
+const eventInput = document.querySelector(".event-search-input");
+
+if (eventForm) {
+  eventForm.addEventListener("submit", e => {
+    e.preventDefault(); // 새로고침 방지
+
+    // 1. 지금 어떤 탭이 눌려있지?
+    const activeBtn = document.querySelector(".btn-area button.active");
+    const category = activeBtn.getAttribute("data-filter");
+
+    // 2. 검색창엔 뭐라고 썼지?
+    const keyword = eventInput.value.toLowerCase().trim();
+
+    // 3. 빈 바구니 준비!
+    const result = [];
+
+    // 4. 30개 데이터를 하나씩 꺼내서 검사
+    allData.forEach(item => {
+      // 카테고리가 '전체'거나, 선택한 탭이랑 똑같을 때
+      const categoryOk = category === "all" || item.category === category;
+      // 제목에 검색어가 들어있을 때
+      const keywordOk = item.title.toLowerCase().includes(keyword);
+
+      // 둘 다 맞으면 바구니에 담기!
+      if (categoryOk && keywordOk) {
+        result.push(item);
+      }
+    });
+
+    // 5. 바구니에 담긴 것만 화면에 그려줘!
+    renderData(result);
+  });
+}
 
 /* 메인비주얼 슬라이드 */
 document.addEventListener("DOMContentLoaded", function () {
@@ -295,9 +438,7 @@ var eventSwiper = new Swiper(".eventpage", {
     // 처음 로드될 때
     init: function () {
       // 진짜 슬라이드 개수 계산
-      const totalSlides = this.slides.filter(
-        (slide) => !slide.classList.contains("swiper-slide-duplicate"),
-      ).length;
+      const totalSlides = this.slides.filter(slide => !slide.classList.contains("swiper-slide-duplicate")).length;
 
       const section = this.el.closest(".event");
       const pagination = section.querySelector(".event-pagination");
@@ -338,9 +479,7 @@ var onlineSwiper = new Swiper(".onlineslide", {
   on: {
     init: function () {
       // 진짜 슬라이드 개수만 계산
-      const realSlides = this.slides.filter(
-        (slide) => !slide.classList.contains("swiper-slide-duplicate"),
-      ).length;
+      const realSlides = this.slides.filter(slide => !slide.classList.contains("swiper-slide-duplicate")).length;
 
       // 이 Swiper에 해당하는 pagination만 찾기
       const onlineSection = this.el.closest(".online");
@@ -358,6 +497,3 @@ var onlineSwiper = new Swiper(".onlineslide", {
     },
   },
 });
-
-
-

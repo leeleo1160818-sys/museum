@@ -422,11 +422,12 @@ main .inner .btn {
   height: 100%;
   margin-bottom: 26px;
 }
+
 .floor-info li a span {
   position: absolute;
   padding: 24px;
   left: 0;
-  bottom: 130px;
+  bottom: 30px;
   font-size: 50px;
   color: #fff;
   text-shadow: 1px 1px 1px #333;
