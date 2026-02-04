@@ -112,7 +112,7 @@ $(function () {
   });
 });
 
-/* gnb상단 고정 이건 (아직 모르겠다;) */
+/* gnb상단 고정 */
 window.addEventListener("load", () => {
   // 1. 모든 리소스 로드 후 실행 (위치 계산 정확도 UP)
   const gnbArea = document.querySelector(".gnb-area");
@@ -197,147 +197,185 @@ $(".m-list-open").on("click", function (e) {
 });
 
 /* 이벤트json */
+let allData = [];
+let filteredData = [];
+let currentPage = 1;
+
+const itemsPerPage = 6;
+const pageCount = 5;
+
+/* =========================1. 데이터 가져오기========================= */
 function fetchEvents() {
   fetch("https://69772b3a5b9c0aed1e859570.mockapi.io/performances")
     .then(res => res.json())
     .then(data => {
       allData = data;
-      renderData(data);
-      //console.log(data);
+      updateData(data); // 상태 업데이트 전용 함수
     });
 }
 
-//원본 보관용
-let allData = [];
-
-/* =====================================
-   1. 날짜 변환 함수
-=====================================*/
-function toDate(dateStr) {
-  // .을 -로 바꿔줘야 "yyyy-mm-dd" 형식이 돼!
-  const cleanDate = dateStr.replaceAll(".", "-").trim();
-  return new Date(cleanDate + "T00:00:00");
+/* =========================2. 상태 변경 전용 함수========================= */
+function updateData(data) {
+  filteredData = data;
+  currentPage = 1;
+  render();
 }
 
-/* =====================================
-   2. 화면 출력 함수
-=====================================*/
-function renderData(data) {
+/* =========================3. 중앙 렌더 함수========================= */
+function render() {
+  renderList();
+  renderPagination();
+}
+
+/* =========================4. 리스트만 그림========================= */
+function renderList() {
   const listContainer = document.querySelector(".event-list");
   const countSpan = document.querySelector(".result span");
 
-  // 1. 개수 업데이트
-  countSpan.textContent = data.length;
+  countSpan.textContent = filteredData.length;
+
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+
+  const sliced = filteredData.slice(start, end);
 
   const today = new Date();
 
-  const html = data
+  const html = sliced
     .map(item => {
-      // --- [날짜 로직: 배운 방식 응용] ---
       const dates = item.period.split(" ~ ");
       const targetDateStr = dates.length === 2 ? dates[1] : dates[0];
-      const endDate = toDate(targetDateStr);
-      endDate.setHours(23, 59, 59);
 
-      let statusText = "";
-      let statusClass = "";
+      const endDate = new Date(targetDateStr.replaceAll(".", "-") + "T23:59:59");
+      const expired = today > endDate;
 
-      if (today > endDate) {
-        statusText = item.category === "performance" ? "지난 공연" : "지난 행사";
-        statusClass = "expired";
-      } else {
-        statusText = item.category === "performance" ? "공연 중" : "행사 중";
-        statusClass = "on";
-      }
+      const statusClass = expired ? "expired" : "on";
+      const statusText = expired ? "지난 행사" : "진행 중";
 
-      // --- HTML 출력 ---
       return `
     <li class="event-card">
-        <div class="card-image">
-          <a href=""><img src="${item.image}" alt="${item.title}"></a>
-        </div>
-        <div class="card-content">
-          <span class="status-tag ${statusClass}">
-            ${statusText}
-          </span>
-          <a href=""><h3 class="card-title">${item.title}</h3></a> 
-          <dl class="card-info">
-            <div class="info-row">
-              <dt>장소</dt>
-              <dd>${item.place}</dd>
-            </div>
-            <div class="info-row">
-              <dt>기간</dt>
-              <dd>${item.period}</dd>
-            </div>
-            <div class="info-row">
-              <dt>입장료</dt>
-              <dd>${item.price}</dd>
-            </div>
-          </dl>
-        </div>
+      <div class="card-image">
+        <a href="">
+          <img src="${item.image}" alt="${item.title}">
+        </a>
+      </div>
+
+      <div class="card-content">
+        <span class="status-tag ${statusClass}">
+          ${statusText}
+        </span>
+
+        <a href="">
+          <h3 class="card-title">${item.title}</h3>
+        </a>
+
+        <dl class="card-info">
+          <div class="info-row">
+            <dt>장소</dt>
+            <dd>${item.place}</dd>
+          </div>
+
+          <div class="info-row">
+            <dt>기간</dt>
+            <dd>${item.period}</dd>
+          </div>
+
+          <div class="info-row">
+            <dt>입장료</dt>
+            <dd>${item.price}</dd>
+          </div>
+        </dl>
+      </div>
     </li>
-    `;
+  `;
     })
     .join("");
 
   listContainer.innerHTML = html;
 }
 
-// 버튼 필터링 이벤트
-const filterButtons = document.querySelectorAll(".btn-area button");
+/* =========================5. 페이지 버튼만 담당========================= */
+function renderPagination() {
+  const container = document.querySelector(".pagination");
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
 
-filterButtons.forEach(btn => {
+  // ⭐⭐⭐ page-info 동기화 추가
+  const currentSpan = document.querySelector(".page-info span:first-child");
+  const totalSpan = document.querySelector(".total-pages");
+
+  currentSpan.textContent = currentPage;
+  totalSpan.textContent = totalPages;
+
+  let html = "";
+
+  html += `
+    <button onclick="movePage(${currentPage - 1})"
+      ${currentPage === 1 ? "disabled" : ""}>
+      <i class="ri-arrow-left-s-line"></i>
+    </button>
+  `;
+
+  for (let i = 1; i <= totalPages; i++) {
+    html += `
+      <button 
+        class="${i === currentPage ? "active" : ""}"
+        onclick="movePage(${i})">
+        ${i}
+      </button>
+    `;
+  }
+
+  html += `
+    <button onclick="movePage(${currentPage + 1})"
+      ${currentPage === totalPages ? "disabled" : ""}>
+      <i class="ri-arrow-right-s-line"></i>
+    </button>
+  `;
+
+  container.innerHTML = html;
+}
+
+/* =========================6. 페이지 이동========================= */
+window.movePage = function (page) {
+  currentPage = page;
+  render();
+};
+
+/* =========================7. 필터========================= */
+document.querySelectorAll(".btn-area button").forEach(btn => {
   btn.addEventListener("click", e => {
-    // 버튼 디자인 변경
-    filterButtons.forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".btn-area button").forEach(b => b.classList.remove("active"));
+
     e.target.classList.add("active");
 
-    const category = e.target.getAttribute("data-filter");
+    const category = e.target.dataset.filter;
 
-    // 전체면 allData 다 보여주고, 아니면 필터링해서 보여주기
-    const filtered = category === "all" ? allData : allData.filter(item => item.category === category);
+    const result = category === "all" ? allData : allData.filter(item => item.category === category);
 
-    renderData(filtered);
+    updateData(result); // 상태만 변경
   });
 });
-fetchEvents();
 
-// 검색 기능 (event-search-form 전용)
+/* =========================8. 검색========================= */
 const eventForm = document.querySelector(".event-search-form");
-const eventInput = document.querySelector(".event-search-input");
 
 if (eventForm) {
   eventForm.addEventListener("submit", e => {
-    e.preventDefault(); // 새로고침 방지
+    e.preventDefault();
 
-    // 1. 지금 어떤 탭이 눌려있지?
-    const activeBtn = document.querySelector(".btn-area button.active");
-    const category = activeBtn.getAttribute("data-filter");
+    const keyword = document.querySelector(".event-search-input").value.toLowerCase();
 
-    // 2. 검색창엔 뭐라고 썼지?
-    const keyword = eventInput.value.toLowerCase().trim();
+    const active = document.querySelector(".btn-area .active").dataset.filter;
 
-    // 3. 빈 바구니 준비!
-    const result = [];
+    const result = allData.filter(
+      item => (active === "all" || item.category === active) && item.title.toLowerCase().includes(keyword)
+    );
 
-    // 4. 30개 데이터를 하나씩 꺼내서 검사
-    allData.forEach(item => {
-      // 카테고리가 '전체'거나, 선택한 탭이랑 똑같을 때
-      const categoryOk = category === "all" || item.category === category;
-      // 제목에 검색어가 들어있을 때
-      const keywordOk = item.title.toLowerCase().includes(keyword);
-
-      // 둘 다 맞으면 바구니에 담기!
-      if (categoryOk && keywordOk) {
-        result.push(item);
-      }
-    });
-
-    // 5. 바구니에 담긴 것만 화면에 그려줘!
-    renderData(result);
+    updateData(result);
   });
 }
+
+fetchEvents();
 
 /* 메인비주얼 슬라이드 */
 document.addEventListener("DOMContentLoaded", function () {

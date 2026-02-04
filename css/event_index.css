@@ -392,13 +392,16 @@ header {
   background: url(../img/btn_swiper_next.png) no-repeat center/cover;
 }
 /*=================================================================================================================  */
+main > #event > .inner {
+  margin-bottom: 100px;
+}
+
 main > #event > .inner > h2 {
   font-size: 40px;
   color: #222222;
   font-weight: 600;
   margin-bottom: 50px;
 }
-
 
 main > #event > .inner > .btn-area button {
   background: none;
@@ -491,12 +494,12 @@ main > #event > .inner > .btn-area .active {
 
 /* 진행 중 - 보라색 */
 .card-content span.on {
-  background: #3f0b9f
+  background: #3f0b9f;
 }
 
 /* 종료됨 - 그레이색 */
 .card-content span.expired {
-  background: #aaaaaa
+  background: #aaaaaa;
 }
 
 .card-title {
@@ -524,11 +527,67 @@ main > #event > .inner > .btn-area .active {
   color: #666666;
 }
 
+/* 페이지네이션 */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 50px;
+  min-height: 50px;
+}
+
+.page-info {
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+  color: #666;
+  background: #f4f4f4;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+.page-info span {
+  font-size: 16px;
+}
+
+/* 숫자 버튼들 모임 */
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pagination button {
+  background: none;
+  border: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.pagination button.active {
+  color: #333;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+}
+
+button i {
+  font-size: 40px;
+  font-weight: 300;
+}
 
 /*=================================================================================================================  */
 /* ft-top */
 #ft-top .inner {
-  padding-top: 50px;
+  border-top: solid 1px #c8c8c8;
+  padding-top: 100px;
 }
 
 .ft-list {

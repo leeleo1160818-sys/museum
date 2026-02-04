@@ -496,7 +496,8 @@ main .inner .btn {
 /*=================================================================================================================  */
 /* ft-top */
 #ft-top .inner {
-  padding-top: 50px;
+  border-top: solid 1px #c8c8c8;
+  padding-top: 100px;
 }
 
 .ft-list {
