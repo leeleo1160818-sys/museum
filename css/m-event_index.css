@@ -57,7 +57,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 390px;
+  width: 100%;
   height: 100%;
   background: #fff;
   z-index: 5000;
@@ -144,7 +144,7 @@ header {
   position: fixed;
   inset: 0;
   z-index: 3000;
-  width: 390px;
+  width: 100%;
 }
 
 /* 배경 전용 레이어 */
@@ -296,10 +296,14 @@ main > #event > .inner > h2 {
   font-weight: 600;
   margin-bottom: 50px;
 }
+main > #event > .inner > .btn-area {
+  margin: 0 auto;
+  text-align: center;
+}
 
 main > #event > .inner > .btn-area button {
   background: none;
-  padding: 20px 40px;
+  padding: 20px 30px;
   color: #555555;
   font-size: 17px;
   border-bottom: 4px solid #aaaaaa;

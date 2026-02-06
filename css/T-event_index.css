@@ -173,6 +173,7 @@ header {
   position: fixed;
   inset: 0;
   z-index: 3000;
+  width: 100%;
 }
 
 /* 배경 전용 레이어 */

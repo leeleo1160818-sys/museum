@@ -1,35 +1,11 @@
-.inner {
-  width: 90%;
+section + section {
+  margin-bottom: 20px;
 }
 
 /* 헤더 */
 header {
   position: relative;
-  margin-bottom: 53px;
-}
-
-.header-top {
-  background: #edf1f5;
-}
-
-.header-top .inner {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.header-top .inner img {
-  width: 27px;
-}
-
-.header-top .inner p {
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.header-link {
-  display: none;
+  margin-bottom: 20px;
 }
 
 .gnb-area {
@@ -42,13 +18,8 @@ header {
   padding-bottom: 15px;
 }
 
-.gnb-area.fixed > .inner {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.gnb-area .gnb {
-  display: none;
+.gnb-area .logo img {
+  width: 130px;
 }
 
 .search-area {
@@ -72,13 +43,13 @@ header {
   font-size: 30px;
 }
 
-.search {
-  background: none;
-  cursor: default;
+.util span img {
+  width: 25px;
 }
 
-.gnb .depth2 {
-  display: none;
+.search img {
+  width: 20px;
+  vertical-align: bottom;
 }
 
 /* 모바일gnb */
@@ -113,13 +84,13 @@ header {
 
 .m-gnb-top .lang > a {
   display: inline-block;
-  font-size: 28px;
+  font-size: 14px;
   padding: 0 0 30px 20px;
   border-top: 2px solid #000;
 }
 
 .m-gnb-top .lang span {
-  font-size: 35px;
+  font-size: 14px;
   vertical-align: middle;
 }
 
@@ -132,7 +103,7 @@ header {
   display: none;
   width: 100%;
   position: absolute;
-  top: 82px;
+  top: 54px;
   left: 0;
   background: #000;
   color: #ccc;
@@ -141,7 +112,7 @@ header {
 }
 
 .m-gnb-top .lang ul li {
-  font-size: 28px;
+  font-size: 14px;
   padding: 10px;
 }
 
@@ -152,7 +123,7 @@ header {
 }
 
 .m-util h2 {
-  font-size: 58px;
+  font-size: 26px;
   font-weight: 600;
 }
 
@@ -162,7 +133,7 @@ header {
 }
 
 .m-util p {
-  font-size: 38px;
+  font-size: 19px;
   font-weight: 500;
   color: #000;
 }
@@ -184,15 +155,25 @@ header {
   background: url("../img/imgi_51_bg_search.png") no-repeat center / cover;
   opacity: 0.85;
   pointer-events: none;
-  z-index: -1;
 }
 
 /* 상단 영역 (로고 + 닫기) */
+
 .search-top {
-  max-width: 100%;
-  padding: 60px 20px 0;
-  box-sizing: border-box;
-  z-index: 1;
+  max-width: 360px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 20px 0;
+}
+
+.search-top img {
+  width: 180px;
+}
+
+.close-btn img {
+  width: 30px;
 }
 
 /* 폼 */
@@ -216,52 +197,27 @@ header {
   font-size: 16px;
 }
 
-/* ============================================ */
-@media (max-width: 430px) {
-  /* 상단 여백 줄이기 */
-  .search-layer .search-box {
-    top: 42%;
-    transform: translate(-50%, -42%);
-  }
-
-  .search-layer .search-form {
-    width: 100%;
-  }
-
-  .search-layer .search-input {
-    height: 46px;
-    font-size: 14px;
-  }
-
-  .search-layer .search-submit {
-    width: 72px;
-    height: 46px;
-    font-size: 14px;
-    flex-shrink: 0;
-  }
-}
-
 .m-icon {
   background: #f4f4f4;
-  margin: 35px 0 50px 0;
-  padding: 30px 40px;
+  margin: 20px 0 40px 0;
+  padding: 30px 32px;
   border-top: 1px solid #000;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
 }
 
 .m-icon li a {
   display: flex;
   align-items: center;
-  gap: 20px;
-  font-size: 24px;
+  gap: 10px;
+  font-size: 16px;
   color: #000;
 }
 
 .m-icon li img {
-  width: 46px;
+  width: 25px;
 }
 
 /* m-list */
@@ -280,31 +236,18 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 44px;
+  font-size: 22px;
   font-weight: 500;
-}
-
-.m-depth1 {
-  display: none;
 }
 
 .m-depth1 li {
   margin-top: 30px;
   color: #000;
-  font-size: 32px;
+  font-size: 18px;
 }
 
-.m-list-open.active span {
-  color: #3f0b9f;
-  border-bottom: 4px solid #3f0b9f;
-}
-
-.m-list-open.active i {
-  transform: rotate(180deg);
-}
-
-.m-close-btn {
-  background: none;
+.m-close-btn img {
+  width: 20px;
 }
 
 /* header link */
@@ -314,9 +257,11 @@ header {
 }
 
 .right-link ul {
-  gap: 30px;
+  gap: 10px;
 }
-
+.right-link ul img {
+  width: 23px;
+}
 .right-link ul li:nth-child(1),
 .right-link ul li:nth-child(3) {
   display: none;
@@ -327,130 +272,206 @@ header {
   display: flex;
   justify-content: left;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
   color: #666666;
-  font-size: 25px;
+  font-size: 14px;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .left-nav-link ul i {
-  font-size: 28px;
+  font-size: 15px;
 }
 
 .left-nav-link li + li a::before {
-  height: 15px;
-  left: -30px;
+  height: 10px;
+  left: -20px;
 }
 
 /* ==================================================================================================================== */
 
-#int .inner {
-  padding-block: 50px 100px;
-  border-bottom: 1px solid #c8c8c8;
-}
-
-#int .inner h2 {
-  font-size: 60px;
-  font-weight: 600;
+main > #board > .inner > h2 {
+  font-size: 30px;
   color: #222222;
-  margin-bottom: 60px;
-}
-
-#int .inner h3 {
-  font-size: 44px;
-  font-weight: 400;
-  color: #202020;
+  font-weight: 600;
   margin-bottom: 50px;
 }
 
-#int .inner h3 strong {
-  font-size: 50px;
+.board-search-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
-.int-main {
+.board-search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 0 15px;
+}
+
+.board-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+}
+
+.board-search-submit {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.board-search-input::placeholder {
+  font-size: 18px;
+  color: #888;
+}
+
+.board-result {
+  margin: 25px 0 20px 0;
+  font-size: 16px;
+  color: #666666;
+}
+
+.board-result span {
+  color: #970119;
+}
+
+tbody tr {
   display: block;
+  padding: 45px 0;
+  border-bottom: 2px solid #efefef;
 }
 
-figure .PC {
+tbody tr td {
+  padding: 19px 0;
+  color: #202020;
+  word-break: keep-all;
+  box-sizing: border-box;
+  text-align: center;
+  color: #202020;
+}
+
+tbody tr td:nth-child(2),
+tbody tr td:nth-child(3),
+tbody tr td:nth-child(6) {
+  width: auto !important;
+  display: inline-block;
+  position: relative;
+  padding: 10px 15px;
+  font-size: 18px;
+  color: #666;
+}
+tbody tr td:nth-child(2),
+tbody tr td:nth-child(6) {
+  padding-left: 0;
+  position: relative;
+}
+
+tbody tr td:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #666;
+}
+tbody tr td:nth-child(4) {
+  display: block;
+  padding: 0;
+  width: 100% !important;
+  text-align: left;
+  font-size: 22px;
+  color: #202020;
+}
+
+/* 페이지네이션 */
+.board-pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 50px;
+  min-height: 50px;
+}
+
+.board-page-info {
   display: none;
 }
 
-figure .mobile {
-  width: 100%;
-  display: block;
-  margin-bottom: 30px;
-}
-.text-area {
-  width: 100%;
-  padding: 0;
-}
-
-.text-area h4 {
-  font-size: 26px;
-  font-weight: 400;
-  color: #222222;
-  margin-bottom: 40px;
-}
-
-.text-area .text {
-  margin-bottom: 40px;
+.board-page-info span {
   font-size: 16px;
-  font-weight: 400;
-  color: #666666;
-  line-height: 28px;
-  word-break: keep-all;
 }
 
-.text-area span {
+/* 숫자 버튼들 모임 */
+.board-pagination {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.board-pagination button {
+  background: none;
+  border: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
   font-size: 24px;
-  color: #000;
-  font-weight: 500;
-  padding-bottom: 18px;
-  display: block;
-  line-height: 32px;
+  color: #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
 }
 
-.text-area p:last-child {
-  text-align: right;
+.board-pagination button.active {
+  color: #333;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
 }
 
-.text-area img {
-  text-align: right;
-  height: 55px;
+button i {
+  font-size: 40px;
+  font-weight: 300;
 }
 
 /* ==================================================================================================================== */
 /* ft-top */
-.ft-top .inner {
-  padding-top: 50px;
-}
-.ft-list {
-  display: none;
-}
 
 .ft-site {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 30px 0 0;
+  display: block;
+  margin: 10px 0 0;
 }
 
 .ft-site li {
-  width: 50%;
+  width: 100%;
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 18px;
   font-weight: 500;
   color: #000;
+  letter-spacing: -1px;
 }
 
 .ft-site li img {
-  height: 30px;
+  height: 20px;
 }
-
 /* ft-main */
 
 #ft-main .inner {
-  margin-top: 100px;
+  margin-top: 50px;
   border-top: none;
   padding-block: 0;
   display: flex;
@@ -462,7 +483,7 @@ figure .mobile {
 }
 
 .ft-menu > p {
-  font-size: 36px;
+  font-size: 18px;
   font-weight: 500;
   color: #000;
   margin-bottom: 20px;
@@ -480,12 +501,12 @@ figure .mobile {
 }
 
 .ft-link a {
-  font-size: 36px;
+  font-size: 18px;
   padding: 5px 0 5px 15px;
 }
 
 .ft-link i {
-  font-size: 36px;
+  font-size: 18px;
   padding-left: 30px;
   vertical-align: middle;
 }
@@ -510,37 +531,38 @@ figure .mobile {
 }
 
 .ft-menu-depth2 li {
-  font-size: 24px;
+  font-size: 15px;
   color: #cccccc;
   padding: 10px;
-}
-
-.ft-menu-depth2 li:hover {
-  color: gold;
-  text-decoration: underline;
-}
-
-.ft-menu-depth1-open.active .ft-link {
-  background: #000;
-  color: #fff;
-  margin: 0;
 }
 
 .ft-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
 }
 
 .ft-link img {
   width: 20px;
 }
 
+.ft-menu .ft-sns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+.ft-sns a img {
+  height: 26px;
+}
+
 .ft-menu .info-list {
   display: flex;
   justify-content: center;
-  gap: 80px;
+  gap: 30px;
 }
 
 .ft-menu .info-list li {
@@ -549,7 +571,7 @@ figure .mobile {
 
 .ft-menu .info-list .m-open {
   display: block;
-  font-size: 25px;
+  font-size: 15px;
   padding-block: 50px;
 }
 
@@ -573,20 +595,11 @@ figure .mobile {
 }
 
 .ft-menu .address {
-  font-size: 28px;
-  font-weight: 400;
-  color: #444444;
-  line-height: 1.5;
-  text-align: left;
-  margin-bottom: 15px;
+  font-size: 15px;
 }
 
 .ft-menu .copy {
-  font-size: 28px;
-  font-weight: 400;
-  color: #444444;
-  text-align: left;
-  margin: 0 0 30px;
+  font-size: 15px;
 }
 
 .ft-pt {

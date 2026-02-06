@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>국립중앙박물관&gt;문화행사&gt;전체&gt;전체</title>
+    <title>국립중앙박물관&gt;학술행사&middot;출판&gt;학술행사&gt;목록</title>
     <link rel="icon" href="img/favicon.png" type="image/png" />
 
     <!-- Link Swiper's CSS -->
@@ -16,10 +16,10 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/event_index.css" />
+    <link rel="stylesheet" href="css/board_index.css" />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/T-event_index.css" media="screen and (max-width: 768px)" />
-    <link rel="stylesheet" href="css/m-event_index.css" media="screen and (max-width: 430px)" />
+    <link rel="stylesheet" href="css/T-board_index.css" media="screen and (max-width: 768px)" />
+    <link rel="stylesheet" href="css/m-board_index.css" media="screen and (max-width: 430px)" />
     <!-- jquery -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Swiper JS -->
@@ -650,43 +650,50 @@
               <li>
                 <a href="index.html"><i class="fa-regular fa-house"></i></a>
               </li>
-              <li><a href="exh_floor_index.html">문화행사</a></li>
-              <li><a href="exh_floor_index.html">전체</a></li>
-              <li><a href="exh_floor_index.html">전체</a></li>
+              <li><a href="board_index.html">학술행사&middot;출판</a></li>
+              <li><a href="board_index.html">학술행사</a></li>
             </ul>
           </div>
         </div>
       </div>
       <!-- ========================================================================================================= -->
       <main>
-        <section id="event">
+        <section id="board">
           <div class="inner">
-            <h2>전체</h2>
-            <div class="btn-area">
-              <button class="active" data-filter="all">전체</button>
-              <button data-filter="event">행사</button>
-              <button data-filter="performance">공연</button>
-            </div>
+            <h2>학술행사</h2>
 
-            <div class="event-search-box">
-              <form action="#" class="event-search-form">
-                <input type="text" placeholder="행사, 공연명" class="event-search-input" />
-                <button type="submit" class="event-search-submit">
+            <div class="board-search-box">
+              <form action="#" class="board-search-form">
+                <input type="text" placeholder="제목, 내용" class="board-search-input" />
+                <button type="submit" class="board-search-submit">
                   <img src="img/imgi_50_btn_search_open.png" alt="" />
                 </button>
               </form>
             </div>
 
-            <p class="result">총 <span>0</span>건이 검색되었습니다.</p>
-
-            <div class="list">
-              <ul class="event-list">
-                <!-- js로 출력 -->
-              </ul>
+            <p class="board-result">총 <span>0</span>건이 검색되었습니다.</p>
+            <div class="main-board">
+              <table class="board-list">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 8%">번호</th>
+                    <th scope="col" style="width: 10%">구분</th>
+                    <th scope="col" style="width: 12%">박물관</th>
+                    <th scope="col" style="width: 40%">제목</th>
+                    <th scope="col" style="width: 8%">작성자</th>
+                    <th scope="col" style="width: 10%">작성일</th>
+                    <th scope="col" style="width: 7%">조회</th>
+                  </tr>
+                </thead>
+                <tbody class="board-body">
+                  <!-- API데이터 -->
+                </tbody>
+              </table>
             </div>
-            <div class="pagination-container">
-              <div class="page-info">페이지 <span>1</span> / <span class="total-pages">86</span></div>
-              <div class="pagination"></div>
+
+            <div class="board-pagination-container">
+              <div class="board-page-info">페이지 <span>1</span> / <span class="board-total-pages">1</span></div>
+              <div class="board-pagination"></div>
             </div>
           </div>
         </section>
@@ -1330,6 +1337,6 @@
         <img src="img/imgi_85_btn_top.png" alt="" />
       </a>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/board-script.js"></script>
   </body>
 </html>

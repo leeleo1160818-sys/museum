@@ -345,81 +345,187 @@ header {
 
 /* ==================================================================================================================== */
 
-#int .inner {
-  padding-block: 50px 100px;
-  border-bottom: 1px solid #c8c8c8;
-}
-
-#int .inner h2 {
+main > #board > .inner > h2 {
   font-size: 60px;
-  font-weight: 600;
   color: #222222;
-  margin-bottom: 60px;
-}
-
-#int .inner h3 {
-  font-size: 44px;
-  font-weight: 400;
-  color: #202020;
+  font-weight: 600;
   margin-bottom: 50px;
 }
 
-#int .inner h3 strong {
-  font-size: 50px;
+.board-search-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
-.int-main {
-  display: block;
+.board-search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 0 15px;
 }
 
-figure .PC {
+.board-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+}
+
+.board-search-submit {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.board-search-input::placeholder {
+  font-size: 20px;
+  color: #888;
+}
+
+.board-result {
+  margin: 35px 0 35px 0;
+  font-size: 26px;
+  color: #666666;
+}
+
+.board-result span {
+  color: #970119;
+}
+.board-list {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+table {
+  border-collapse: collapse;
+}
+thead {
   display: none;
 }
 
-figure .mobile {
-  width: 100%;
+tbody tr {
   display: block;
-  margin-bottom: 30px;
-}
-.text-area {
-  width: 100%;
-  padding: 0;
+  padding: 45px 0;
+  border-bottom: 2px solid #efefef;
 }
 
-.text-area h4 {
-  font-size: 26px;
-  font-weight: 400;
-  color: #222222;
-  margin-bottom: 40px;
-}
-
-.text-area .text {
-  margin-bottom: 40px;
-  font-size: 16px;
-  font-weight: 400;
-  color: #666666;
-  line-height: 28px;
+tbody tr td {
+  padding: 19px 0;
+  color: #202020;
   word-break: keep-all;
+  box-sizing: border-box;
+  text-align: center;
+  color: #202020;
 }
 
-.text-area span {
-  font-size: 24px;
-  color: #000;
-  font-weight: 500;
-  padding-bottom: 18px;
+tbody tr td:nth-child(1),
+tbody tr td:nth-child(5),
+tbody tr td:nth-child(7) {
+  display: none;
+  font-size: 26px;
+}
+
+tbody tr td:nth-child(2),
+tbody tr td:nth-child(3),
+tbody tr td:nth-child(6) {
+  width: auto !important;
+  display: inline-block;
+  position: relative;
+  padding: 15px 28px;
+  font-size: 26px;
+  color: #666;
+}
+tbody tr td:nth-child(2),
+tbody tr td:nth-child(6) {
+  padding-left: 0;
+  position: relative;
+}
+
+tbody tr td:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #666;
+}
+tbody tr td:nth-child(4) {
   display: block;
-  line-height: 32px;
+  padding: 0;
+  width: 100% !important;
+  text-align: left;
+  font-size: 38px;
+  color: #202020;
 }
 
-.text-area p:last-child {
-  text-align: right;
+/* 페이지네이션 */
+.board-pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 50px;
+  min-height: 50px;
 }
 
-.text-area img {
-  text-align: right;
-  height: 55px;
+.board-page-info {
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+  color: #666;
+  background: #f4f4f4;
+  padding: 8px 15px;
+  border-radius: 4px;
 }
 
+.board-page-info span {
+  font-size: 16px;
+}
+
+/* 숫자 버튼들 모임 */
+.board-pagination {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.board-pagination button {
+  background: none;
+  border: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.board-pagination button.active {
+  color: #333;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+}
+
+button i {
+  font-size: 40px;
+  font-weight: 300;
+}
 /* ==================================================================================================================== */
 /* ft-top */
 .ft-top .inner {
